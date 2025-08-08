@@ -4,11 +4,11 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 # Add src to path
-sys.path.append(str(Path(__file__).parent / 'src'))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from data.load_data import load_data
-from data.clean_data import clean_data
-from data.transform_data import transform_data
+from src.data.load_data import load_data
+from src.data.clean_data import clean_data
+from src.data.transform_data import transform_data
 from models.train import load_model
 
 def evaluate_single_model(model, X_test, y_test, model_name):
@@ -33,7 +33,7 @@ def main():
     
     # Load and prepare data
     print("\n1. Preparing data...")
-    df = load_data("data/raw/customer_churn.csv")
+    df = load_data("../data/raw/customer_churn.csv")
     df_clean = clean_data(df)
     X_train, X_test, y_train, y_test = transform_data(df_clean)
     

@@ -20,22 +20,21 @@ def encode_categorical_features(df):
     
     return df_encoded
 
-def scale_numerical_features(df, fit_scaler=True, scaler=None):
+def scale_numerical_features(df, numerical_cols, fit_scaler=True, scaler=None):
     """Scale numerical features using StandardScaler"""
     df_scaled = df.copy()
-    numerical_cols = ['age', 'tenure', 'monthly_charges', 'total_charges']
-    
+    # Ensure all expected numerical columns exist, even if missing
+    for col in numerical_cols:
+        if col not in df_scaled.columns:
+            df_scaled[col] = 0  # or np.nan and impute later
     if fit_scaler:
         scaler = StandardScaler()
-        for col in numerical_cols:
-            if col in df_scaled.columns:
-                df_scaled[col] = scaler.fit_transform(df_scaled[[col]])
+        df_scaled[numerical_cols] = scaler.fit_transform(df_scaled[numerical_cols])
         return df_scaled, scaler
     else:
-        for col in numerical_cols:
-            if col in df_scaled.columns:
-                df_scaled[col] = scaler.transform(df_scaled[[col]])
+        df_scaled[numerical_cols] = scaler.transform(df_scaled[numerical_cols])
         return df_scaled
+
 
 def create_churn_features(df):
     """Create new features for churn prediction"""
@@ -110,24 +109,19 @@ def load_transformers(filepath="models/transformers.pkl"):
     return transformers['scaler'], transformers['label_encoder']
 
 def transform_data(df):
-    """Complete data transformation pipeline"""
     print("Starting data transformation...")
     
-    # Create features
     df_features = create_churn_features(df)
-    
-    # Encode categorical features
     df_encoded = encode_categorical_features(df_features)
     
-    # Split data
     X_train, X_test, y_train, y_test, label_encoder = split_data(df_encoded)
+
+    # Decide numerical columns from training set
+    numerical_cols = ['age', 'tenure', 'monthly_charges', 'total_charges']
     
-    # Scale numerical features
-    X_train_scaled, scaler = scale_numerical_features(X_train, fit_scaler=True)
-    X_test_scaled = scale_numerical_features(X_test, fit_scaler=False, scaler=scaler)
+    X_train_scaled, scaler = scale_numerical_features(X_train, numerical_cols, fit_scaler=True)
+    X_test_scaled = scale_numerical_features(X_test, numerical_cols, fit_scaler=False, scaler=scaler)
     
-    # Save transformers
     save_transformers(scaler, label_encoder)
-    
     print("Data transformation completed")
     return X_train_scaled, X_test_scaled, y_train, y_test
