@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 import joblib
@@ -89,7 +90,7 @@ def split_data(df, target_column='churn', test_size=0.2):
     print(f"Train set: {len(X_train)} samples")
     print(f"Test set: {len(X_test)} samples")
     
-    return X_train, X_test, y_train, y_test, le
+    return X_train, X_test, y_train, y_test, le, X, y
 
 def save_transformers(scaler, label_encoder, filepath="models/transformers.pkl"):
     """Save transformers for later use"""
@@ -114,14 +115,34 @@ def transform_data(df):
     df_features = create_churn_features(df)
     df_encoded = encode_categorical_features(df_features)
     
-    X_train, X_test, y_train, y_test, label_encoder = split_data(df_encoded)
+    X_train, X_test, y_train, y_test, label_encoder, X, y = split_data(df_encoded)
 
     # Decide numerical columns from training set
     numerical_cols = ['age', 'tenure', 'monthly_charges', 'total_charges']
     
     X_train_scaled, scaler = scale_numerical_features(X_train, numerical_cols, fit_scaler=True)
     X_test_scaled = scale_numerical_features(X_test, numerical_cols, fit_scaler=False, scaler=scaler)
+
+    # Save processed train and test data
+    output_dir = "../data/processed"
+    os.makedirs(output_dir, exist_ok=True)
+    
+    X_train_scaled.to_csv(os.path.join(output_dir, "X_train.csv"), index=False)
+    X_test_scaled.to_csv(os.path.join(output_dir, "X_test.csv"), index=False)
+    y_train_saved = pd.DataFrame(y_train)
+    y_train_saved.to_csv(os.path.join(output_dir, "y_train.csv"), index=False)
+    y_test_saved = pd.DataFrame(y_test)
+    y_test_saved.to_csv(os.path.join(output_dir, "y_test.csv"), index=False)
+
+    # Save features and target name
+    col_features = pd.DataFrame(list(X.columns))
+    col_features.to_csv('../features.csv', header=False, index=False)
+    target_col = pd.DataFrame([y.name])
+    target_col.to_csv('../target.csv', header=False, index=False)
     
     save_transformers(scaler, label_encoder)
     print("Data transformation completed")
     return X_train_scaled, X_test_scaled, y_train, y_test
+    
+
+

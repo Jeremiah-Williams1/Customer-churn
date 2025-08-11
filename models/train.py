@@ -1,3 +1,5 @@
+import sys
+import os
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -49,24 +51,34 @@ def train_model_with_config(model_name, X_train, y_train):
     
     grid_search.fit(X_train, y_train)
     best_model = grid_search.best_estimator_
+
+    parameters = grid_search.best_params_
     
-    print(f"Best parameters: {grid_search.best_params_}")
     print(f"Best CV score: {grid_search.best_score_:.4f}")
     
-    return best_model
+    return best_model, parameters
 
 def train_all_models(X_train, y_train):
     """Train all configured models"""
     configs = get_model_configs()
     trained_models = {}
-    
+    reports = []
+
     for model_name in configs.keys():
         try:
-            model = train_model_with_config(model_name, X_train, y_train)
+            model, parameters  = train_model_with_config(model_name, X_train, y_train)
             trained_models[model_name] = model
-            
+            reports.append({'Model_name':model_name,'Model':model, 'Parameters':parameters})
+
             # Save model
             save_model(model, f"models/{model_name}.pkl")
+
+            # Save metrics
+            path = Path('../metrics')
+            path.mkdir(parents=True, exist_ok=True) 
+            joblib.dump(reports, path / "Report.joblib")
+
+
             
         except Exception as e:
             print(f"Error training {model_name}: {str(e)}")

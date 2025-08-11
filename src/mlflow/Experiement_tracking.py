@@ -1,18 +1,25 @@
 import os
+import sys
 import mlflow
 import dagshub
 import joblib
 import mlflow.sklearn
+from pathlib import Path
+import sys
+from pathlib import Path
 
 
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+from src.data.load_data import load_data
 
-# use the function inside the evaluate model cause all the report necessary for tracking are developed there
+
+reports = joblib.load('../metrics/Report.joblib')
+
+
 def log_experiement_tracking(reports, X_train):
     """
     Takes in the report and then logs each of the metrics to mlflow for online tracking
-    don't forget the login credentials with dagshub
     """
-
     # Login credentials for mlflow tracking on dagshub
     import dagshub
     dagshub.init(repo_owner='jerremiahwilly', repo_name='Customer-churn', mlflow=True)
@@ -25,7 +32,7 @@ def log_experiement_tracking(reports, X_train):
     mlflow.set_experiment('Customer Churn Predictio')  # The name of the Project
 
     # Logging metrics and model 
-    for model_report in reports:
+    for i, model_report in enumerate(reports):
         try:    
             with mlflow.start_run(run_name=  model_report['Model_name']):
 
@@ -45,14 +52,15 @@ def log_experiement_tracking(reports, X_train):
                 model_info = mlflow.sklearn.log_model(
                         sk_model=model_report['Model'],
                         artifact_path= model_report['Model_name'],
-                        input_example=X_train,
+                        # consider adding an input example to show snippet of the datset used
                         )
                 
-                print('Experiement tracked successfully')
+                print(f'successfully logged Experiment for {model_report['Model_name']}')
 
         except Exception as e:
             print(f"Error tracking {model_report['Model_name']}")
     
+    print(f'successfully logged {i+1} experiments')
 
     
 
@@ -61,7 +69,6 @@ def register_model():
     """
     Registers a model that has been logged based on it id
     """
-
     model_name = 'RandomForest Model'
     run_id = input('Enter Run ID')
 
@@ -75,8 +82,21 @@ def load_registered_model(model_name,  model_version):
     """
     loads one of the registered model based on some id 
     """
-
     load_uri = f"models:/{model_name}/{model_version}"
 
     # loaded_model = mlflow.sklearn.load_model(load_uri)
     loaded_ml = mlflow.sklearn.load_model(load_uri)
+
+
+def main():
+    """Main Experiement tracking function"""
+    print('\n Logging the Experiements')
+
+    X_train = load_data('../data/processed/X_train.csv')
+    reports = joblib.load('../metrics/Report.joblib')
+
+    log_experiement_tracking(reports, X_train)
+
+
+if __name__ == "__main__":
+    main()
