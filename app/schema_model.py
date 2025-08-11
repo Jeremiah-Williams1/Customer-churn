@@ -1,17 +1,22 @@
 from pydantic import BaseModel
-
+from enum import Enum
 # creates subclasses for some type of selection before using them in the main base model
+class Online_security(str, Enum):
+    Yes ='Yes'
+    No = 'No'
+    No_internet = 'No internet Service'
 
 class Input(BaseModel):
-    age : int
-    # tenure 
-    # monthly_charges
-    # total_charges
+    age : int 
+    tenure : int 
+    monthly_charges : float
+    total_charges : float
+    gender_Male : str
+    online_security : Online_security
     # tenure_group
     # avg_monthly_charges
     # high_value_customer
     # service_count
-    # gender_Male
     # contract_One year
     # contract_Two year
     # internet_service_Fiber optic

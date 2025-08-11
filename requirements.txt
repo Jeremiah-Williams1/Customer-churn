@@ -2,3 +2,9 @@ dvc
 docker 
 sklearn
 python 
+mlflow 
+pytest 
+airflow
+pandas 
+numpy 
+joblib
