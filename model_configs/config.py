@@ -71,7 +71,7 @@ def train_all_models(X_train, y_train):
             reports.append({'Model_name':model_name,'Model':model, 'Parameters':parameters})
 
             # Save model
-            save_model(model, f"models/{model_name}.pkl")
+            save_model(model, f"../models/{model_name}.pkl")
 
             # Save metrics
             path = Path('../metrics')

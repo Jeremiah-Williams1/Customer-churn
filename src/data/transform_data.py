@@ -92,7 +92,7 @@ def split_data(df, target_column='churn', test_size=0.2):
     
     return X_train, X_test, y_train, y_test, le, X, y
 
-def save_transformers(scaler, label_encoder, filepath="models/transformers.pkl"):
+def save_transformers(scaler, label_encoder, filepath="../models/transformers.pkl"):
     """Save transformers for later use"""
     Path(filepath).parent.mkdir(parents=True, exist_ok=True)
     
@@ -103,7 +103,7 @@ def save_transformers(scaler, label_encoder, filepath="models/transformers.pkl")
     joblib.dump(transformers, filepath)
     print(f"Transformers saved to {filepath}")
 
-def load_transformers(filepath="models/transformers.pkl"):
+def load_transformers(filepath="../models/transformers.pkl"):
     """Load saved transformers"""
     transformers = joblib.load(filepath)
     print(f"Transformers loaded from {filepath}")

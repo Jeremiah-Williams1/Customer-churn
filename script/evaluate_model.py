@@ -12,8 +12,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 from src.data.load_data import load_data
 from src.data.clean_data import clean_data
 from src.data.transform_data import transform_data
-from models.train import load_model
-from src.mlflow.Experiement_tracking import log_experiement_tracking
+
 
 def evaluate_single_model(model, X_test, y_test):
     """Evaluate a single model"""
@@ -42,10 +41,11 @@ def main():
     print("=== MODEL EVALUATION ===")
     
     # Load and prepare data
-    print("\n1. Preparing data...")
-    df = load_data("../data/raw/customer_churn.csv")
-    df_clean = clean_data(df)
-    X_train, X_test, y_train, y_test = transform_data(df_clean)
+    print("\n1. Loading the test dataset...")
+    X_test = load_data('../data/processed/X_test.csv')
+    y_test = load_data('../data/processed/y_test.csv')
+
+
     
     results = []
     reports = joblib.load('../metrics/Report.joblib')
