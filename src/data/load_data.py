@@ -3,6 +3,9 @@ from pathlib import Path
 
 def load_data(file_path):
     """Load data from CSV file"""
+    base_dir = Path(__file__).resolve().parent.parent.parent  # go up to project root
+    file_path = (base_dir / file_path).resolve()
+
     file_path = Path(file_path)
     if not file_path.exists():
         raise FileNotFoundError(f"Data file not found: {file_path}")

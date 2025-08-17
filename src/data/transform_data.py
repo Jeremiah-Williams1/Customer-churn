@@ -92,21 +92,36 @@ def split_data(df, target_column='churn', test_size=0.2):
     
     return X_train, X_test, y_train, y_test, le, X, y
 
-def save_transformers(scaler, label_encoder, filepath="../models/transformers.pkl"):
+def save_transformers(scaler, label_encoder, filepath="Models/transformers.pkl"):
     """Save transformers for later use"""
-    Path(filepath).parent.mkdir(parents=True, exist_ok=True)
+    
+   
+    script_dir = Path(__file__).parent
+    main_folder = script_dir.parent.parent
+    
+    # Create the full path to the Models folder in the main directory
+    full_filepath = main_folder / filepath
+    
+    # Create the Models directory if it doesn't exist
+    full_filepath.parent.mkdir(parents=True, exist_ok=True)
     
     transformers = {
         'scaler': scaler,
         'label_encoder': label_encoder
     }
-    joblib.dump(transformers, filepath)
-    print(f"Transformers saved to {filepath}")
+    joblib.dump(transformers, full_filepath)
+    print(f"Transformers saved to {full_filepath}")
 
-def load_transformers(filepath="../models/transformers.pkl"):
+def load_transformers(filepath="Models/transformers.pkl"):
     """Load saved transformers"""
-    transformers = joblib.load(filepath)
-    print(f"Transformers loaded from {filepath}")
+    script_dir = Path(__file__).parent    
+    main_folder = script_dir.parent.parent
+    
+    # full path
+    full_filepath = main_folder / filepath
+    
+    transformers = joblib.load(full_filepath)
+    print(f"Transformers loaded from {full_filepath}")
     return transformers['scaler'], transformers['label_encoder']
 
 def transform_data(df):
@@ -123,6 +138,49 @@ def transform_data(df):
     X_train_scaled, scaler = scale_numerical_features(X_train, numerical_cols, fit_scaler=True)
     X_test_scaled = scale_numerical_features(X_test, numerical_cols, fit_scaler=False, scaler=scaler)
 
+    # Get the directory where this script is located
+    script_dir = Path(__file__).parent
+    
+    # Go up to the main folder (churn) - since this script is in src/data/
+    main_folder = script_dir.parent.parent
+    
+    # Create processed data directory in main folder
+    output_dir = main_folder / "data" / "processed"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Save processed train and test data
+    X_train_scaled.to_csv(output_dir / "X_train.csv", index=False)
+    X_test_scaled.to_csv(output_dir / "X_test.csv", index=False)
+    y_train_saved = pd.DataFrame(y_train)
+    y_train_saved.to_csv(output_dir / "y_train.csv", index=False)
+    y_test_saved = pd.DataFrame(y_test)
+    y_test_saved.to_csv(output_dir / "y_test.csv", index=False)
+
+    # Save features and target name in main directory
+    col_features = pd.DataFrame(list(X.columns))
+    col_features.to_csv(main_folder / 'features.csv', header=False, index=False)
+    target_col = pd.DataFrame([y.name])
+    target_col.to_csv(main_folder / 'target.csv', header=False, index=False)
+    
+    save_transformers(scaler, label_encoder)
+    print("Data transformation completed")
+    return X_train_scaled, X_test_scaled, y_train, y_test
+
+# def transform_data(df):
+    print("Starting data transformation...")
+    
+    df_features = create_churn_features(df)
+    df_encoded = encode_categorical_features(df_features)
+    
+    X_train, X_test, y_train, y_test, label_encoder, X, y = split_data(df_encoded)
+
+    # Decide numerical columns from training set
+    numerical_cols = ['age', 'tenure', 'monthly_charges', 'total_charges']
+    
+    X_train_scaled, scaler = scale_numerical_features(X_train, numerical_cols, fit_scaler=True)
+    X_test_scaled = scale_numerical_features(X_test, numerical_cols, fit_scaler=False, scaler=scaler)
+
+    
     # Save processed train and test data
     output_dir = "../data/processed"
     os.makedirs(output_dir, exist_ok=True)

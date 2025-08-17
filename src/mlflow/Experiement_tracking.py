@@ -13,9 +13,8 @@ sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 from src.data.load_data import load_data
 
 
-reports = joblib.load('../metrics/Report.joblib')
 
-from utils.mlflow_setup import setup_mlflow
+from mlflow_setup import setup_mlflow
 import mlflow
 
 def log_experiment_tracking(reports, X_train):
@@ -60,10 +59,10 @@ def main():
     """Main Experiement tracking function"""
     print('\n Logging the Experiements')
 
-    X_train = load_data('../data/processed/X_train.csv')
-    reports = joblib.load('../metrics/Report.joblib')
+    X_train = load_data('data/processed/X_train.csv')
+    reports = joblib.load(Path(__file__).parent.parent.parent / 'metrics' / 'Report.joblib')
 
-    log_experiement_tracking(reports, X_train)
+    log_experiment_tracking(reports, X_train)
 
 if __name__ == "__main__":
     main()

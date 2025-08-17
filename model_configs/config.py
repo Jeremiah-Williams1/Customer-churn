@@ -66,17 +66,24 @@ def train_all_models(X_train, y_train):
 
     for model_name in configs.keys():
         try:
-            model, parameters  = train_model_with_config(model_name, X_train, y_train)
+            model, parameters = train_model_with_config(model_name, X_train, y_train)
             trained_models[model_name] = model
-            reports.append({'Model_name':model_name,'Model':model, 'Parameters':parameters})
+            reports.append({'Model_name': model_name, 'Model': model, 'Parameters': parameters})
 
-            # Save model
-            save_model(model, f"../models/{model_name}.pkl")
-
-            # Save metrics
-            path = Path('../metrics')
-            path.mkdir(parents=True, exist_ok=True) 
-            joblib.dump(reports, path / "Report.joblib")
+            script_dir = Path(__file__).parent
+            main_folder = script_dir.parent
+            
+            # Save model to Models folder in main directory
+            models_dir = main_folder / "Models"
+            models_dir.mkdir(parents=True, exist_ok=True)
+            model_path = models_dir / f"{model_name}.pkl"
+            joblib.dump(model, model_path)  # Assuming you have a save_model function or use joblib directly
+            print(f"Model saved to {model_path}")
+            
+            metrics_dir = main_folder / "metrics"
+            metrics_dir.mkdir(parents=True, exist_ok=True)
+            report_path = metrics_dir / "Report.joblib"
+            joblib.dump(reports, report_path)
 
 
             

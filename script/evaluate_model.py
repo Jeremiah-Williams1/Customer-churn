@@ -42,13 +42,13 @@ def main():
     
     # Load and prepare data
     print("\n1. Loading the test dataset...")
-    X_test = load_data('../data/processed/X_test.csv')
-    y_test = load_data('../data/processed/y_test.csv')
+    X_test = load_data('data/processed/X_test.csv')
+    y_test = load_data('data/processed/y_test.csv')
 
 
     
     results = []
-    reports = joblib.load('../metrics/Report.joblib')
+    reports = joblib.load(Path(__file__).parent.parent / 'metrics' / 'Report.joblib')
     
 
     for report in reports:
@@ -68,8 +68,8 @@ def main():
         except Exception as e:
             print(f"Error evaluating {model_name}: {str(e)}")
 
-    joblib.dump(reports, "../metrics/Report.joblib")
-
+    joblib.dump(reports, Path(__file__).parent.parent / 'metrics' / 'Report.joblib')
+    
     # Summary
     if results:
         results_df = pd.DataFrame(results)
