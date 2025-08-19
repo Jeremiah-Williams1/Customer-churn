@@ -1,19 +1,30 @@
+import sys
+from pathlib import Path
 from fastapi import FastAPI
+from schema_model import Churn_Input
+import pandas as pd
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from src.data.transform_data import preprocess_new_data
+from Models import load_file
 
 app = FastAPI()
 
+model = load_file('random_forest.joblib')
+
 @app.get('/')
 def home():
-    return {'Message': 'Welcome to Churn Prediction',
-            'Goto': '/predict root for prediction'
-            }
+    return{'Welcome': 'Churn Prediction'}
 
-@app.post('/predict')
-def predict():
-    pass
-    # loads the encoders
-    # set the schema for the input to be set
-    # pass the input to the encoder to encdde it
-    # load the model
-    # pass the encoded input to the model
-    # get a prediction 
+
+@app.post("/predict")
+def predict(data: Churn_Input):
+    input_df = pd.DataFrame([data.dict()])  
+    
+    processed = preprocess_new_data(input_df)
+    prediction = model.predict(processed)[0]  
+    
+    if prediction == 1:
+        return {"prediction": "This customer would churn"}
+    else:
+        return {"prediction": "Customer would not churn"}

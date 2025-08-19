@@ -11,25 +11,34 @@ def remove_duplicates(df):
     return df_clean
 
 def handle_missing_values(df):
-    """Handle missing values in the dataset"""
+    """
+    Clean and handle missing data with domain-specific logic
+    """
     df_clean = df.copy()
     
-    # Convert total_charges to numeric (sometimes it's stored as string)
+    # Convert TotalCharges to numeric (often stored as string with spaces)
     if 'total_charges' in df_clean.columns:
         df_clean['total_charges'] = pd.to_numeric(df_clean['total_charges'], errors='coerce')
+        
+        # For customers with 0 tenure, total_charges should be 0
+        df_clean.loc[df_clean['tenure'] == 0, 'total_charges'] = 0
     
-    # Fill missing values
-    for column in df_clean.columns:
-        if df_clean[column].isnull().sum() > 0:
-            if df_clean[column].dtype in ['int64', 'float64']:
-                # For numerical columns, use median
-                df_clean[column].fillna(df_clean[column].median(), inplace=True)
-            else:
-                # For categorical columns, use mode
-                df_clean[column].fillna(df_clean[column].mode()[0], inplace=True)
-            
-            print(f"Filled missing values in {column}")
+        # Fill remaining missing values with median based on tenure groups
+        median_by_tenure = df_clean.groupby(pd.cut(df_clean['tenure'], bins=[0, 12, 24, 48, 72]))['total_charges'].median()
+        for idx in df_clean[df_clean['total_charges'].isna()].index:
+            tenure_group = pd.cut([df_clean.loc[idx, 'tenure']], bins=[0, 12, 24, 48, 72])[0]
+            df_clean.loc[idx, 'total_charges'] = median_by_tenure.get(tenure_group, df_clean['total_charges'].median())
     
+    # Handle any other missing values
+    for col in df_clean.select_dtypes(include=[np.number]).columns:
+        if df_clean[col].isna().sum() > 0:
+            df_clean[col] = df_clean[col].fillna(df_clean[col].median())
+    
+    for col in df_clean.select_dtypes(include=['object']).columns:
+        if df_clean[col].isna().sum() > 0:
+            df_clean[col] = df_clean[col].fillna(df_clean[col].mode()[0])
+    
+    print("Data cleaning completed")
     return df_clean
 
 def remove_outliers(df):

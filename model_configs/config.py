@@ -2,7 +2,7 @@ import sys
 import os
 import pandas as pd
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
 import joblib
@@ -23,10 +23,20 @@ def get_model_configs():
             'model': RandomForestClassifier(random_state=42),
             'params': {
                 'n_estimators': [100, 200],
-                'max_depth': [10, 20],
+                'max_depth': [3,5, 10],
                 'min_samples_split': [2, 5]
             }
-        }
+        },
+
+        'Gradient Boosting': {
+            'model': GradientBoostingClassifier(random_state=42),
+            'params': {
+                'n_estimators': [100, 200],
+                'max_depth': [3, 5, 10],
+                'min_samples_split': [2, 5]
+            }
+        },
+        
     }
     return configs
 
@@ -76,8 +86,8 @@ def train_all_models(X_train, y_train):
             # Save model to Models folder in main directory
             models_dir = main_folder / "Models"
             models_dir.mkdir(parents=True, exist_ok=True)
-            model_path = models_dir / f"{model_name}.pkl"
-            joblib.dump(model, model_path)  # Assuming you have a save_model function or use joblib directly
+            model_path = models_dir / f"{model_name}.joblib"
+            joblib.dump(model, model_path)  
             print(f"Model saved to {model_path}")
             
             metrics_dir = main_folder / "metrics"
@@ -92,14 +102,3 @@ def train_all_models(X_train, y_train):
     
     return trained_models
 
-def save_model(model, filepath):
-    """Save trained model"""
-    Path(filepath).parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump(model, filepath)
-    print(f"Model saved to {filepath}")
-
-def load_model(filepath):
-    """Load trained model"""
-    model = joblib.load(filepath)
-    print(f"Model loaded from {filepath}")
-    return model

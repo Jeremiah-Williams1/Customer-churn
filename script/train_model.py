@@ -7,6 +7,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 from src.data.load_data import load_data
 from src.data.clean_data import clean_data
 from src.data.transform_data import transform_data
+
 from model_configs.config import train_all_models
 
 

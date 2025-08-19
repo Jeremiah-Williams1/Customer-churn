@@ -8,3 +8,5 @@ airflow
 pandas 
 numpy 
 joblib
+uvicorn
+fastapi

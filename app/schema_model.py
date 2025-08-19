@@ -1,33 +1,49 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from enum import Enum
+
 # creates subclasses for some type of selection before using them in the main base model
 class Online_security(str, Enum):
     Yes ='Yes'
     No = 'No'
     No_internet = 'No internet Service'
 
-class Input(BaseModel):
-    age : int 
-    tenure : int 
-    monthly_charges : float
-    total_charges : float
-    gender_Male : str
-    online_security : Online_security
-    # tenure_group
-    # avg_monthly_charges
-    # high_value_customer
-    # service_count
-    # contract_One year
-    # contract_Two year
-    # internet_service_Fiber optic
-    # internet_service_No
-    # online_security_No internet service
-    # online_security_Yes
-    # tech_support_No internet service
-    # tech_support_Yes
-    # streaming_tv_No internet service
-    # streaming_tv_Yes
-    # payment_method_Credit card
-    # payment_method_Electronic check
-    # payment_method_Mailed check
-    # paperless_billing_Yes
+class Gender(str, Enum):
+    male = 'Male'
+    female = 'Female'
+
+class Contract(str, Enum):
+    Month_to_month  = 'Month-to-month'    
+    One_year  =  'One year'  
+    Two_year =' Two year'
+
+class Internet(str, Enum):
+    Fiber_optic = 'Fiber_optic' 
+    DSL  = 'DSL'          
+    No   = 'No' 
+
+class Paperless_Billing(str, Enum):
+    Yes = 'Yes'
+    No = 'No'
+
+class Payment_method(str, Enum):
+    Electronic_check = 'Electronic_check'
+    Bank_transfer = 'Bank_transfer'
+    Credit_card = 'Credit_card'
+    Mailed_check = 'Mailed_check'
+
+class Churn_Input(BaseModel):
+    age : int = Field(..., description='Age of User', example= 45) 
+    tenure : int = Field(..., description='Tenure', example= 45)
+    monthly_charges : float = Field(..., description='Monthly charges', example= 45)
+    total_charges : float = Field(..., description='Total Charges', example= 45)
+    gender : Gender = Field(..., description='Gender')
+    online_security : Online_security = Field(..., description='Do the user have online security')
+    contract: Contract  = Field(..., description='Contract Type')
+    internet_service: Internet  = Field(..., description='What type of Internet service is being used')
+    tech_support : Online_security  = Field(..., description='Do the user have tech support')
+    streaming_tv : Online_security  = Field(..., description='Do the TV Stream')
+    payment_method : Payment_method  = Field(..., description='Whats the payment method')
+    paperless_billing : Paperless_Billing  = Field(..., description='Paperless billing?')
+
+
+

@@ -2,6 +2,7 @@ import mlflow
 import mlflow.pyfunc
 from mlflow_setup import setup_mlflow
 
+
 def load_model_by_version(model_name, version):
 
     setup_mlflow(experiment_name="Customer Churn Prediction")
@@ -98,7 +99,7 @@ if __name__ == "__main__":
     try:
         # Test loading latest version
         print("\n1. Testing latest version...")
-        model = load_latest_model(model_name)
+        model = load_model_by_version(model_name, version=1)
         print(f"Model type: {type(model)}")
         
         # Test prediction (assuming your model has predict method)
