@@ -10,7 +10,7 @@ on:
 
 
 # Actions or Jobs
-job: 
+jobs: 
 
   test: # Job to run(in this case testing)
     runs-on: ubuntu-latest  # where to run the job(test)- github provides this container
