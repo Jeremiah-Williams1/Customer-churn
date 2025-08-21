@@ -77,12 +77,3 @@ if __name__ == "__main__":
         print("Invalid choice. Please run again.")
 
 
-
-# the artifct path is set in the Experiment_tracking but a code snippet is shown below
-'''
-                mlflow.sklearn.log_model(
-                    sk_model=model_report['Model'],
-                    artifact_path=model_report['Model_name'],
-                )
-
-'''

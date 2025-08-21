@@ -152,7 +152,7 @@ def load_transformers(filepath="Models/transformers.joblib"):
     return transformers
 
 
-def transform_data(df):
+def transform_data(df, training=True):
     print("Starting data transformation...")
     
     # Create features and save threshold
@@ -170,33 +170,39 @@ def transform_data(df):
     X_train_scaled, scaler = scale_numerical_features(X_train, numerical_cols, fit_scaler=True)
     X_test_scaled = scale_numerical_features(X_test, numerical_cols, fit_scaler=False, scaler=scaler)
 
-    # Save processed data
-    script_dir = Path(__file__).parent
-    main_folder = script_dir.parent.parent
-    output_dir = main_folder / "data" / "processed"
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
-    X_train_scaled.to_csv(output_dir / "X_train.csv", index=False)
-    X_test_scaled.to_csv(output_dir / "X_test.csv", index=False)
-    pd.DataFrame(y_train).to_csv(output_dir / "y_train.csv", index=False)
-    pd.DataFrame(y_test).to_csv(output_dir / "y_test.csv", index=False)
+    if training:
+        # Save processed data
+        script_dir = Path(__file__).parent
+        main_folder = script_dir.parent.parent
+        output_dir = main_folder / "data" / "processed"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        X_train_scaled.to_csv(output_dir / "X_train.csv", index=False)
+        X_test_scaled.to_csv(output_dir / "X_test.csv", index=False)
+        pd.DataFrame(y_train).to_csv(output_dir / "y_train.csv", index=False)
+        pd.DataFrame(y_test).to_csv(output_dir / "y_test.csv", index=False)
 
-    # Save metadata
-    pd.DataFrame(list(X.columns)).to_csv(main_folder / 'features.csv', header=False, index=False)
-    pd.DataFrame([y.name]).to_csv(main_folder / 'target.csv', header=False, index=False)
+        # Save metadata
+        pd.DataFrame(list(X.columns)).to_csv(main_folder / 'features.csv', header=False, index=False)
+        pd.DataFrame([y.name]).to_csv(main_folder / 'target.csv', header=False, index=False)
+        
+        # Save all transformers with enhanced metadata
+        save_transformers(
+            scaler=scaler,
+            label_encoder=label_encoder, 
+            categorical_encoders=categorical_encoders,
+            feature_columns=list(X_train_scaled.columns),
+            high_value_threshold=high_value_threshold,
+            numerical_cols=numerical_cols
+        )
+        print("Data transformation completed")
+        return X_train_scaled, X_test_scaled, y_train, y_test
     
-    # Save all transformers with enhanced metadata
-    save_transformers(
-        scaler=scaler,
-        label_encoder=label_encoder, 
-        categorical_encoders=categorical_encoders,
-        feature_columns=list(X_train_scaled.columns),
-        high_value_threshold=high_value_threshold,
-        numerical_cols=numerical_cols
-    )
-    
-    print("Data transformation completed")
-    return X_train_scaled, X_test_scaled, y_train, y_test
+    else:
+        print("Data transformation completed")
+        return X_train_scaled, X_test_scaled, y_train, y_test
+
+
 
 
 
