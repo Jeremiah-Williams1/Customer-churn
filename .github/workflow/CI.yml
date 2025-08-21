@@ -4,8 +4,7 @@ name: Churn CI #Name of the Action
 # using key value pairs with proprer indentation to write yml files 
 on: 
   push: 
-    branch: 
-      - main 
+    branchs: [main] 
   pull_request: 
     branch:
       - main
