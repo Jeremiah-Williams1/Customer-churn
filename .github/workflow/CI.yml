@@ -1,0 +1,67 @@
+name: Churn CI #Name of the Action
+
+# Events 
+# using key value pairs with proprer indentation to write yml files 
+on: 
+  push: 
+    branch: 
+      - main 
+  pull_request: 
+    branch:
+      - main
+
+# Actions or Jobs
+job: 
+
+  test: # Job to run(in this case testing)
+    runs-on: ubuntu-latest  # where to run the job(test)- github provides this container
+  
+    steps: # steps to follow when running the job
+
+    # step 1: Check out the code from the repository 
+    - name: Check the code 
+      uses: actions/checkout@v4
+
+    # Step 2: setting up the python environment
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3 # the github action used to setup the environment
+      with:
+        python-version: "3.12"
+
+    # Step 4: Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # Step 5: Run test 
+    - name: Test with pytest
+      run: pytest # this automaticaly runs all test cases
+
+
+  build-and-publish:
+    needs: test # makes this build-and-publish wait for test to finish 
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: check the code
+        uses:  actions/checkout@v4
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+    
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: jerremiahwilly/prediction-churn-app:latest
+
+    
+

@@ -23,8 +23,15 @@ def predict(data: Churn_Input):
     
     processed = preprocess_new_data(input_df)
     prediction = model.predict(processed)[0]  
+    # proba = model.predict_proba(processed)[0]
     
     if prediction == 1:
-        return {"prediction": "This customer would churn"}
+        return {
+            "prediction": "This customer would churn",
+            # "confidence": round(proba[1], 3)   
+        }
     else:
-        return {"prediction": "Customer would not churn"}
+        return {
+            "prediction": "Customer would not churn",
+            # "confidence": round(proba[0], 3)  
+        }

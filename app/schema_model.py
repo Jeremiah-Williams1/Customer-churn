@@ -17,7 +17,7 @@ class Contract(str, Enum):
     Two_year =' Two year'
 
 class Internet(str, Enum):
-    Fiber_optic = 'Fiber_optic' 
+    Fiber_optic = 'Fiber optic' 
     DSL  = 'DSL'          
     No   = 'No' 
 
@@ -26,10 +26,10 @@ class Paperless_Billing(str, Enum):
     No = 'No'
 
 class Payment_method(str, Enum):
-    Electronic_check = 'Electronic_check'
-    Bank_transfer = 'Bank_transfer'
-    Credit_card = 'Credit_card'
-    Mailed_check = 'Mailed_check'
+    Electronic_check = 'Electronic check'
+    Bank_transfer = 'Bank transfer'
+    Credit_card = 'Credit card'
+    Mailed_check = 'Mailed check'
 
 class Churn_Input(BaseModel):
     age : int = Field(..., description='Age of User', example= 45) 
