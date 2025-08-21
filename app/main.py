@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from fastapi import FastAPI
-from schema_model import Churn_Input
+from .schema_model import Churn_Input
 import pandas as pd
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))

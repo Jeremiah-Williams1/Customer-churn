@@ -1,0 +1,40 @@
+# Python cache / bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Environment & config (local only)
+.env
+.env.*
+
+# VCS / editors / OS stuff
+.git/
+.gitignore
+.gitattributes
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test / dev files
+tests/
+*.log
+.coverage
+htmlcov/
+pytest_cache/
+
+# Docker itself
+Dockerfile
+.dockerignore
+
+# Ignore large data files
+data/
+*.csv
+
+
