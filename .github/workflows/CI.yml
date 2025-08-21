@@ -2,12 +2,12 @@ name: Churn CI #Name of the Action
 
 # Events 
 # using key value pairs with proprer indentation to write yml files 
-on: 
-  push: 
-    branchs: [main] 
-  pull_request: 
-    branch:
-      - main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 
 # Actions or Jobs
 job: 
