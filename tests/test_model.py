@@ -3,7 +3,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 import numpy as np
-from src.mlflow.load_registered_model import get_model
+# from src.mlflow.load_registered_model import get_model
 from src.data.load_data import load_data
 from src.data.transform_data import preprocess_new_data
 from Models import load_file
