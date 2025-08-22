@@ -5,3 +5,6 @@ joblib
 numpy
 pandas 
 pytest
+httpx
+anyio
+mlflow 
