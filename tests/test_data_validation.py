@@ -13,7 +13,7 @@ from src.data.transform_data import transform_data
 
 def test_transform_data():
     # Load data tests
-    df = load_data("data/test/sample.csv")
+    df = load_data("tests/sample.csv")
     assert df.shape[0] > 0, "Dataset should not be empty"
     assert "churn" in df.columns, "Target column missing"
 

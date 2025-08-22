@@ -14,7 +14,7 @@ from src.data.transform_data import transform_data
 from model_configs.config import train_model_with_config
 
 def test_end_to_end_pipeline():
-    data = load_data('data/test/sample.csv') 
+    data = load_data('tests/sample.csv') 
     clean = clean_data(data)
     X_transformed, X_test, y_transformed, y_test = transform_data(clean, training=False)
 
