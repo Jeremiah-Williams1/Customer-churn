@@ -28,7 +28,7 @@ def get_model_configs():
             }
         },
 
-        'Gradient Boosting': {
+        'Gradient_Boosting': {
             'model': GradientBoostingClassifier(random_state=42),
             'params': {
                 'n_estimators': [100, 200],

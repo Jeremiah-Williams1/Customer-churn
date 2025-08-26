@@ -24,6 +24,7 @@ def log_experiment_tracking(reports, X_train):
     # Setup MLflow with credentials & experiment name
     setup_mlflow(experiment_name="Customer Churn Prediction")
 
+    count = 0
     for i, model_report in enumerate(reports):
         try:
             with mlflow.start_run(run_name=model_report['Model_name']):
@@ -46,11 +47,14 @@ def log_experiment_tracking(reports, X_train):
                 )
 
                 print(f"Successfully logged experiment for {model_report['Model_name']}")
+                count +=1
+
+            
 
         except Exception as e:
             print(f"Error tracking {model_report['Model_name']}: {e}")
 
-    print(f"Successfully logged {i + 1} experiments")
+    print(f"Successfully logged {count} experiments")
 
 
  

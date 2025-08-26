@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  sleek-airflow:
+    build: ./airflow        
+    image: sleek-airflow:latest
+    volumes:
+      - ./airflow:/opt/airflow
+      - ./Models:/shared_data/Models    
+      - ./data:/shared_data/data      
+      - ./metrics:/shared_data/metrics    
+      - ./src:/shared_data/src            
+      - /var/run/docker.sock:/var/run/docker.sock  
+    ports:
+      - "8080:8080"
+    command: airflow standalone
+    networks:
+      - airflow-network
+
+networks:
+  airflow-network:
+    driver: bridge
