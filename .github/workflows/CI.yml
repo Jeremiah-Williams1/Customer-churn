@@ -23,6 +23,15 @@ jobs:
         uses: actions/setup-python@v4  # Updated to v4
         with:
           python-version: "3.12"
+      
+      # Adding caching to save pip installs so it dosen't install on every commit
+       - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       # Step 3: Install dependencies
       - name: Install dependencies

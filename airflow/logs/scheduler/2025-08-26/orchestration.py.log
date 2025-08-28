@@ -2286,3 +2286,1544 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowException: missing keyword argument 'image'
 [2025-08-26T21:29:10.402+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
 [2025-08-26T21:29:10.610+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.259 seconds
+[2025-08-26T23:25:27.776+0000] {processor.py:161} INFO - Started process (PID=57) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:25:28.018+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:25:28.021+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:25:28.020+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:25:28.908+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:25:28.899+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:25:28.909+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:25:30.075+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 2.310 seconds
+[2025-08-26T23:26:01.256+0000] {processor.py:161} INFO - Started process (PID=57) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:26:01.259+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:26:01.262+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:26:01.261+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:26:01.340+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:26:01.332+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:26:01.341+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:26:02.147+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.899 seconds
+[2025-08-26T23:26:33.111+0000] {processor.py:161} INFO - Started process (PID=87) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:26:33.113+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:26:33.114+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:26:33.114+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:26:33.172+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:26:33.160+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:26:33.173+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:26:33.372+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.267 seconds
+[2025-08-26T23:27:04.805+0000] {processor.py:161} INFO - Started process (PID=90) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:27:04.807+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:27:04.809+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:27:04.808+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:27:04.886+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:27:04.878+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:27:04.887+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:27:05.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.298 seconds
+[2025-08-26T23:27:35.836+0000] {processor.py:161} INFO - Started process (PID=92) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:27:35.838+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:27:35.840+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:27:35.840+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:27:35.897+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:27:35.890+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:27:35.898+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:27:36.184+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.353 seconds
+[2025-08-26T23:28:06.332+0000] {processor.py:161} INFO - Started process (PID=98) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:28:06.334+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:28:06.336+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:28:06.335+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:28:06.397+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:28:06.390+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:28:06.398+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:28:06.540+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.213 seconds
+[2025-08-26T23:28:36.944+0000] {processor.py:161} INFO - Started process (PID=100) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:28:36.946+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:28:36.948+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:28:36.948+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:28:37.013+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:28:37.006+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:28:37.014+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:28:37.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.260 seconds
+[2025-08-26T23:29:07.360+0000] {processor.py:161} INFO - Started process (PID=102) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:29:07.363+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:29:07.365+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:29:07.364+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:29:07.432+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:29:07.423+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:29:07.433+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:29:07.650+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.296 seconds
+[2025-08-26T23:29:39.100+0000] {processor.py:161} INFO - Started process (PID=104) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:29:39.102+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:29:39.104+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:29:39.103+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:29:39.211+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:29:39.164+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:29:39.211+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:29:39.393+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.299 seconds
+[2025-08-26T23:30:09.691+0000] {processor.py:161} INFO - Started process (PID=106) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:30:09.694+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:30:09.696+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:30:09.695+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:30:09.763+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:30:09.755+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:30:09.763+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:30:10.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.372 seconds
+[2025-08-26T23:30:41.488+0000] {processor.py:161} INFO - Started process (PID=112) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:30:41.490+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:30:41.492+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:30:41.492+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:30:41.554+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:30:41.546+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:30:41.555+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:30:41.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.456 seconds
+[2025-08-26T23:31:12.660+0000] {processor.py:161} INFO - Started process (PID=114) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:31:12.663+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:31:12.665+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:31:12.664+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:31:12.974+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:31:12.964+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:31:12.975+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:31:15.493+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 2.839 seconds
+[2025-08-26T23:31:45.881+0000] {processor.py:161} INFO - Started process (PID=119) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:31:45.883+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:31:45.885+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:31:45.884+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:31:45.945+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:31:45.936+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:31:45.945+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:31:46.952+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.076 seconds
+[2025-08-26T23:32:17.464+0000] {processor.py:161} INFO - Started process (PID=121) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:32:17.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:32:17.468+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:32:17.467+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:32:17.526+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:32:17.518+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:32:17.527+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:32:17.663+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.204 seconds
+[2025-08-26T23:32:48.220+0000] {processor.py:161} INFO - Started process (PID=123) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:32:48.223+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:32:48.224+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:32:48.224+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:32:48.281+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:32:48.274+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:32:48.282+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:32:48.458+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.243 seconds
+[2025-08-26T23:33:20.299+0000] {processor.py:161} INFO - Started process (PID=125) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:20.301+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:33:20.303+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:33:20.302+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:20.362+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:33:20.354+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:33:20.363+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:20.971+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.677 seconds
+[2025-08-26T23:33:51.722+0000] {processor.py:161} INFO - Started process (PID=127) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:51.724+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:33:51.725+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:33:51.725+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:51.786+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:33:51.777+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:33:51.786+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T20:42:41.964+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.575 seconds
+[2025-08-26T23:33:53.955+0000] {processor.py:161} INFO - Started process (PID=128) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:53.957+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:33:53.959+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:33:53.958+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:54.872+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:33:54.864+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:33:54.873+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:33:55.482+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.532 seconds
+[2025-08-26T23:34:28.442+0000] {processor.py:161} INFO - Started process (PID=130) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:34:28.444+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:34:28.446+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:34:28.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:34:28.509+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:34:28.502+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:34:28.510+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:34:29.445+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.008 seconds
+[2025-08-26T23:35:00.120+0000] {processor.py:161} INFO - Started process (PID=132) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:35:00.122+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:35:00.124+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:35:00.123+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:35:00.183+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:35:00.176+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:35:00.184+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:35:00.437+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.323 seconds
+[2025-08-26T23:35:30.509+0000] {processor.py:161} INFO - Started process (PID=134) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:35:30.511+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:35:30.513+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:35:30.512+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:35:30.578+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:35:30.570+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:35:30.579+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:35:30.831+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.329 seconds
+[2025-08-26T23:36:01.085+0000] {processor.py:161} INFO - Started process (PID=136) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:36:01.087+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:36:01.089+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:36:01.088+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:36:01.152+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:36:01.144+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:36:01.153+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:36:01.318+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.238 seconds
+[2025-08-26T23:36:32.439+0000] {processor.py:161} INFO - Started process (PID=138) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:36:32.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:36:32.443+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:36:32.442+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:36:32.505+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:36:32.498+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:36:32.506+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:36:32.974+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.582 seconds
+[2025-08-26T23:37:03.728+0000] {processor.py:161} INFO - Started process (PID=140) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:37:03.730+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:37:03.732+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:37:03.732+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:37:03.864+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:37:03.856+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:37:03.865+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:37:04.020+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.297 seconds
+[2025-08-26T23:37:34.883+0000] {processor.py:161} INFO - Started process (PID=142) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:37:34.885+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:37:34.887+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:37:34.886+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:37:34.944+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:37:34.937+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:37:34.944+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:37:35.435+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.557 seconds
+[2025-08-26T23:38:05.642+0000] {processor.py:161} INFO - Started process (PID=144) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:38:05.644+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:38:05.646+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:38:05.645+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:38:05.710+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:38:05.701+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:38:05.711+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:38:05.923+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.287 seconds
+[2025-08-26T23:38:37.280+0000] {processor.py:161} INFO - Started process (PID=146) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:38:37.284+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:38:37.286+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:38:37.285+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:38:37.351+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:38:37.342+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:38:37.352+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:38:37.534+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.300 seconds
+[2025-08-26T23:39:08.113+0000] {processor.py:161} INFO - Started process (PID=148) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:39:08.115+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:39:08.117+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:39:08.117+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:39:08.251+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:39:08.244+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:39:08.252+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:39:08.418+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.310 seconds
+[2025-08-26T23:39:39.438+0000] {processor.py:161} INFO - Started process (PID=150) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:39:39.440+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:39:39.442+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:39:39.441+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:39:39.502+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:39:39.493+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:39:39.502+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:39:39.674+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.241 seconds
+[2025-08-26T23:40:10.245+0000] {processor.py:161} INFO - Started process (PID=152) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:40:10.247+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:40:10.249+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:40:10.248+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:40:10.312+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:40:10.304+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:40:10.313+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:40:10.550+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.310 seconds
+[2025-08-26T23:40:41.824+0000] {processor.py:161} INFO - Started process (PID=154) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:40:41.826+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:40:41.828+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:40:41.827+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:40:41.891+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:40:41.883+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:40:41.891+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:40:42.182+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.365 seconds
+[2025-08-26T23:41:12.892+0000] {processor.py:161} INFO - Started process (PID=156) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:41:12.894+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:41:12.896+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:41:12.896+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:41:12.959+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:41:12.951+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:41:12.960+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:41:13.145+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.258 seconds
+[2025-08-26T23:41:43.345+0000] {processor.py:161} INFO - Started process (PID=158) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:41:43.348+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:41:43.349+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:41:43.349+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:41:43.413+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:41:43.406+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:41:43.414+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:41:43.581+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.242 seconds
+[2025-08-26T23:42:14.735+0000] {processor.py:161} INFO - Started process (PID=160) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:42:14.738+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:42:14.740+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:42:14.739+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:42:14.807+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:42:14.798+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:42:14.807+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:42:14.949+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.220 seconds
+[2025-08-26T23:42:46.124+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:42:46.126+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:42:46.128+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:42:46.127+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:42:46.191+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:42:46.182+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:42:46.191+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:42:46.700+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.582 seconds
+[2025-08-26T23:43:17.465+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:43:17.467+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:43:17.469+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:43:17.468+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:43:17.532+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:43:17.524+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:43:17.532+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:43:17.871+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.412 seconds
+[2025-08-26T23:43:48.797+0000] {processor.py:161} INFO - Started process (PID=166) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:43:48.799+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:43:48.801+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:43:48.800+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:43:48.864+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:43:48.856+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:43:48.865+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:43:49.157+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.366 seconds
+[2025-08-26T23:44:19.689+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:44:19.691+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:44:19.693+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:44:19.692+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:44:19.757+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:44:19.749+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:44:19.758+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:44:19.925+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.242 seconds
+[2025-08-26T23:44:51.273+0000] {processor.py:161} INFO - Started process (PID=170) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:44:51.277+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:44:51.279+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:44:51.279+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:44:51.340+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:44:51.333+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:44:51.341+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:44:51.493+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.227 seconds
+[2025-08-26T23:45:22.692+0000] {processor.py:161} INFO - Started process (PID=176) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:45:22.694+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:45:22.698+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:45:22.697+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:45:22.761+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:45:22.753+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:45:22.762+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:45:22.985+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.302 seconds
+[2025-08-26T23:45:53.784+0000] {processor.py:161} INFO - Started process (PID=178) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:45:53.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:45:53.788+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:45:53.788+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:45:53.853+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:45:53.846+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:45:53.854+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:45:54.035+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.256 seconds
+[2025-08-26T23:46:25.084+0000] {processor.py:161} INFO - Started process (PID=180) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:46:25.086+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:46:25.088+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:46:25.087+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:46:25.151+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:46:25.142+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:46:25.152+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:46:25.296+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.218 seconds
+[2025-08-26T23:46:55.483+0000] {processor.py:161} INFO - Started process (PID=182) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:46:55.486+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:46:55.487+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:46:55.487+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:46:55.550+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:46:55.542+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:46:55.551+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:46:55.748+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.270 seconds
+[2025-08-26T23:47:26.798+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:47:26.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:47:26.803+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:47:26.802+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:47:26.868+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:47:26.861+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:47:26.869+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:47:27.018+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.226 seconds
+[2025-08-26T23:47:58.428+0000] {processor.py:161} INFO - Started process (PID=186) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:47:58.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:47:58.436+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:47:58.434+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:47:58.592+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:47:58.577+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:47:58.594+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:47:58.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.550 seconds
+[2025-08-26T23:48:29.615+0000] {processor.py:161} INFO - Started process (PID=188) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:48:29.620+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:48:29.625+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:48:29.623+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:48:29.987+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:48:29.973+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:48:29.989+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:48:30.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.863 seconds
+[2025-08-26T23:49:00.932+0000] {processor.py:161} INFO - Started process (PID=190) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:49:00.935+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:49:00.938+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:49:00.937+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:49:01.025+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:49:01.012+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:49:01.026+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:49:01.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.296 seconds
+[2025-08-26T23:49:31.618+0000] {processor.py:161} INFO - Started process (PID=192) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:49:31.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:49:31.628+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:49:31.626+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:49:31.835+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:49:31.821+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:49:31.836+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:49:32.084+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.515 seconds
+[2025-08-26T23:50:02.891+0000] {processor.py:161} INFO - Started process (PID=194) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:50:02.894+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:50:02.897+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:50:02.896+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:50:02.993+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:50:02.977+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:50:02.995+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:50:03.215+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.334 seconds
+[2025-08-26T23:50:56.038+0000] {processor.py:161} INFO - Started process (PID=199) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:50:56.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:50:56.044+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:50:56.043+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:50:56.372+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:50:56.359+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:50:56.373+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:50:56.574+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.543 seconds
+[2025-08-26T23:51:27.664+0000] {processor.py:161} INFO - Started process (PID=202) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:51:27.668+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:51:27.673+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:51:27.672+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:51:27.840+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:51:27.827+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:51:27.841+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:51:28.060+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.410 seconds
+[2025-08-26T23:51:59.245+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:51:59.250+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:51:59.255+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:51:59.253+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:51:59.353+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:51:59.341+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:51:59.354+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:51:59.583+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.352 seconds
+[2025-08-26T23:52:31.272+0000] {processor.py:161} INFO - Started process (PID=206) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:52:31.277+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:52:31.282+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:52:31.281+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:52:31.443+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:52:31.425+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:52:31.445+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:52:31.683+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.467 seconds
+[2025-08-26T23:53:02.594+0000] {processor.py:161} INFO - Started process (PID=208) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:53:02.599+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:53:02.604+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:53:02.602+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:53:02.773+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:53:02.754+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:53:02.775+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:53:02.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.391 seconds
+[2025-08-26T23:53:33.844+0000] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:53:33.849+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:53:33.853+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:53:33.852+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:53:33.980+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:53:33.968+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:53:33.981+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:53:34.353+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.545 seconds
+[2025-08-26T23:54:14.167+0000] {processor.py:161} INFO - Started process (PID=216) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:54:14.171+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:54:14.174+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:54:14.173+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:54:14.302+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:54:14.289+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:54:14.304+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:54:14.706+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.551 seconds
+[2025-08-26T23:54:45.421+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:54:45.426+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:54:45.431+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:54:45.430+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:54:45.618+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:54:45.593+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:54:45.620+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:54:46.028+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.623 seconds
+[2025-08-26T23:55:17.009+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:55:17.011+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:55:17.014+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:55:17.013+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:55:17.117+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:55:17.104+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:55:17.118+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:55:17.352+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.351 seconds
+[2025-08-26T23:55:48.278+0000] {processor.py:161} INFO - Started process (PID=226) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:55:48.280+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:55:48.283+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:55:48.282+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:55:48.384+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:55:48.373+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:55:48.386+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:55:48.582+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.312 seconds
+[2025-08-26T23:56:18.882+0000] {processor.py:161} INFO - Started process (PID=232) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:56:18.885+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:56:18.888+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:56:18.887+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:56:19.018+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:56:19.005+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:56:19.020+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:56:19.207+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.334 seconds
+[2025-08-26T23:56:50.204+0000] {processor.py:161} INFO - Started process (PID=234) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:56:50.214+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:56:50.220+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:56:50.218+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:56:50.324+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:56:50.313+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:56:50.325+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:56:50.530+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.347 seconds
+[2025-08-26T23:57:21.527+0000] {processor.py:161} INFO - Started process (PID=240) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:57:21.530+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:57:21.532+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:57:21.531+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:57:21.632+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:57:21.620+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:57:21.633+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:57:21.818+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.298 seconds
+[2025-08-26T23:57:52.331+0000] {processor.py:161} INFO - Started process (PID=242) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:57:52.334+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:57:52.337+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:57:52.336+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:57:52.435+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:57:52.423+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:57:52.436+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:57:52.644+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.349 seconds
+[2025-08-26T23:58:23.801+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:58:23.804+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:58:23.807+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:58:23.806+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:58:23.909+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:58:23.898+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:58:23.910+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:58:24.075+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.308 seconds
+[2025-08-26T23:58:55.049+0000] {processor.py:161} INFO - Started process (PID=246) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:58:55.051+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:58:55.053+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:58:55.052+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:58:55.113+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:58:55.105+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:58:55.114+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:58:56.092+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.048 seconds
+[2025-08-26T23:59:26.867+0000] {processor.py:161} INFO - Started process (PID=248) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:59:26.870+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:59:26.872+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:59:26.871+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:59:26.932+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:59:26.924+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:59:26.932+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:59:27.365+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.503 seconds
+[2025-08-26T23:59:58.231+0000] {processor.py:161} INFO - Started process (PID=250) to work on /opt/airflow/dags/orchestration.py
+[2025-08-26T23:59:58.233+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-08-26T23:59:58.235+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:59:58.234+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:59:58.341+0000] {logging_mixin.py:188} INFO - [2025-08-26T23:59:58.333+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/orchestration.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/orchestration.py", line 70, in <module>
+    train_model = DockerOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 265, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 793, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to DockerOperator (task_id: train_model). Invalid arguments were:
+**kwargs: {'volumes': ['/shared_data/Models:/app/Models', '/shared_data/data:/app/data', '/shared_data/metrics:/app/metrics', '/shared_data/src:/app/src']}
+[2025-08-26T23:59:58.341+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/orchestration.py
+[2025-08-26T23:59:58.539+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.348 seconds

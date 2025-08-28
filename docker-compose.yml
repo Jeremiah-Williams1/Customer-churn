@@ -1,19 +1,28 @@
-version: '3'
+version: '3.9'
 
 services:
-  sleek-airflow:
-    build: ./airflow        
-    image: sleek-airflow:latest
+  airflow-webserver:
+    build: ./airflow
+    image: airflow:latest
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
     volumes:
-      - ./airflow:/opt/airflow
-      - ./Models:/shared_data/Models    
-      - ./data:/shared_data/data      
-      - ./metrics:/shared_data/metrics    
-      - ./src:/shared_data/src            
-      - /var/run/docker.sock:/var/run/docker.sock  
+      - ./airflow/dags:/opt/airflow/dags
+      - ./Models:/shared_data/Models
+      - ./data:/shared_data/data
+      - ./metrics:/shared_data/metrics
+      - ./src:/shared_data/src
+      - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - "8080:8080"
-    command: airflow standalone
+    entrypoint: >
+      bash -c "
+        airflow db migrate &&
+        airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com || true &&
+        exec airflow webserver --port 8080
+      "
     networks:
       - airflow-network
 
