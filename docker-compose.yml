@@ -1,17 +1,32 @@
 version: '3.9'
 
 services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - airflow-network
+
   airflow-webserver:
     build: ./airflow
     image: airflow:latest
     restart: always
     environment:
-      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=124fasdh3hdshfagh93uoi233ew5
     volumes:
       - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs        # Add logs volume
+      - ./airflow/plugins:/opt/airflow/plugins  # Add plugins volume
       - ./Models:/shared_data/Models
-      - ./data:/shared_data/data
+      - ./data:/shared_data/dave
       - ./metrics:/shared_data/metrics
       - ./src:/shared_data/src
       - /var/run/docker.sock:/var/run/docker.sock
@@ -23,8 +38,37 @@ services:
         airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com || true &&
         exec airflow webserver --port 8080
       "
+    depends_on:
+      - postgres
     networks:
       - airflow-network
+
+  airflow-scheduler:
+    image: airflow:latest
+    restart: always
+    depends_on:
+      - postgres
+      - airflow-webserver
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=124fasdh3hdshfagh93uoi233ew5
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs        # Add logs volume
+      - ./airflow/plugins:/opt/airflow/plugins  # Add plugins volume
+      - ./Models:/shared_data/Models
+      - ./data:/shared_data/dave
+      - ./metrics:/shared_data/metrics
+      - ./src:/shared_data/src
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: airflow scheduler
+    networks:
+      - airflow-network
+
+volumes:
+  postgres_data:
 
 networks:
   airflow-network:

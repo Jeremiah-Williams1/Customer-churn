@@ -16,7 +16,7 @@ default_args = {
 
 # Create the DAG
 dag = DAG(
-    'ml_pipeline_orchestration1',
+    'ml_pipeline_orchestration',
     default_args=default_args,
     description='ML Pipeline: Train -> Evaluate -> Log Experiments',
     schedule_interval=timedelta(days=1),
@@ -25,34 +25,13 @@ dag = DAG(
 
 PROJECT_ROOT = '/shared_data'
 MODELS_PATH = f'{PROJECT_ROOT}/Models'
-DATA_DIR = f'{PROJECT_ROOT}/data' 
+DATA_DIR = f'{PROJECT_ROOT}/dave' 
 METRICS_PATH = f'{PROJECT_ROOT}/metrics'
 SRC_PATH = f'{PROJECT_ROOT}/src'
 
-
 ML_DOCKER_IMAGE = Variable.get("ml_docker_image", default_var="your-dockerhub-username/your-ml-image:latest")
 
-
-DOCKER_NETWORK = 'airflow_airflow-network'
-
-
-docker_common_config = {
-    'image': ML_DOCKER_IMAGE,
-    'api_version': 'auto',
-    'auto_remove': True,
-    'docker_url': 'unix://var/run/docker.sock',
-    'network_mode': DOCKER_NETWORK,
-    'volumes': [
-        f'{MODELS_PATH}:/app/Models',      
-        f'{DATA_DIR}:/app/data',       
-        f'{METRICS_PATH}:/app/metrics',    
-        f'{SRC_PATH}:/app/src',          
-    ],
-    'environment': {
-        'PYTHONPATH': '/app',
-    },
-    'dag': dag,
-}
+DOCKER_NETWORK = Variable.get("docker_network", default_var="your-project-name_airflow-network")
 
 # Task 1: Prepare workspace (ensure directories exist)
 prepare_workspace = BashOperator(
@@ -69,22 +48,45 @@ prepare_workspace = BashOperator(
 # Task 2: Train the model
 train_model = DockerOperator(
     task_id='train_model',
-    command='python script/train.py --output-path /app/Models --models-path /app/models',
-    **docker_common_config,
+    image=ML_DOCKER_IMAGE,
+    command=['python', 'script/train.py'],  # Use list format
+    api_version='auto',
+    auto_remove=True,
+    docker_url='unix://var/run/docker.sock',
+    network_mode=DOCKER_NETWORK,
+    mount_tmp_dir=False,
+    host_tmp_dir='/tmp',
+    working_dir='/app',
+    environment={'PYTHONPATH': '/app'},
+    dag=dag,
 )
 
 # Task 3: Evaluate the model  
 evaluate_model = DockerOperator(
     task_id='evaluate_model',
-    command='python script/evaluate.py --model-path /app/models --results-path /app/metrics --Models-path /app/Models',
-    **docker_common_config,
+    image=ML_DOCKER_IMAGE,
+    command='python script/evaluate.py',
+    api_version='auto',
+    auto_remove=True,
+    docker_url='unix://var/run/docker.sock',
+    network_mode=DOCKER_NETWORK,
+    mount_tmp_dir=False,
+    container_name='ml_evaluate_{{ ds_nodash }}_{{ ts_nodash }}',
+    dag=dag,
 )
 
 # Task 4: Log experiments
 log_experiments = DockerOperator(
     task_id='log_experiments',
-    command='python log_experiments.py --model-path /app/models --metrics-path /app/metrics --Models-path /app/Models',
-    **docker_common_config,
+    image=ML_DOCKER_IMAGE,
+    command='python src/mlflow/log_experiments.py',
+    api_version='auto',
+    auto_remove=True,
+    docker_url='unix://var/run/docker.sock',
+    network_mode=DOCKER_NETWORK,
+    mount_tmp_dir=False,
+    container_name='ml_log_{{ ds_nodash }}_{{ ts_nodash }}',
+    dag=dag,
 )
 
 # Optional: Task to summarize results
@@ -96,7 +98,7 @@ def summarize_results():
     summary = {
         "pipeline_completed": True,
         "timestamp": datetime.now().isoformat(),
-        "models_available": os.path.exists(f"{DATA_DIR}"),
+        "data_available": os.path.exists(f"{DATA_DIR}"),
         "metrics_available": os.path.exists(f"{METRICS_PATH}"),
         "Models_available": os.path.exists(f"{MODELS_PATH}")
     }
@@ -127,6 +129,3 @@ cleanup = BashOperator(
 
 # Define task dependencies
 prepare_workspace >> train_model >> evaluate_model >> log_experiments >> summarize_pipeline >> cleanup
-
-# Alternative: If you want parallel execution after training
-# prepare_workspace >> train_model >> [evaluate_model, log_experiments] >> summarize_pipeline >> cleanup

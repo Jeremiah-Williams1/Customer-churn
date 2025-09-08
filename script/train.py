@@ -17,7 +17,7 @@ def main():
     
     # Load data
     print("\n1. Loading data...")
-    df = load_data("data/raw/customer_churn.csv")
+    df = load_data("dave/raw/customer_churn.csv")
     
     # Clean data
     print("\n2. Cleaning data...")

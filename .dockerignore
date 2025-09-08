@@ -1,26 +1,22 @@
-# Python cache / bytecode
+# Ignore logs
+airflow/logs
+
+# Ignore Airflow temp files
+airflow/tmp
+airflow/*.pid
+
+# Ignore Python cache
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
-# Virtual environments
-.venv/
-env/
-venv/
-
-# Environment & config (local only)
+# Ignore environment files
 .env
-.env.*
+.venv
+*.egg-info
 
-# VCS / editors / OS stuff
-.git/
-.gitignore
-.gitattributes
-.vscode/
-.idea/
+# Ignore OS junk
 .DS_Store
-Thumbs.db
 
 # Test / dev files
 tests/
@@ -32,9 +28,5 @@ pytest_cache/
 # Docker itself
 Dockerfile
 .dockerignore
-
-# Ignore large data files
-data/
-*.csv
 
 

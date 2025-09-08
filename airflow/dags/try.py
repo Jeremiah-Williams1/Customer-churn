@@ -16,22 +16,24 @@ default_args = {
 
 # Create the DAG
 dag = DAG(
-    'ml_pipeline_orchestration',
+    'ml_pipeline_orchestration2',
     default_args=default_args,
     description='ML Pipeline: Train -> Evaluate -> Log Experiments',
     schedule_interval=timedelta(days=1),
     catchup=False,
 )
 
+
+
 PROJECT_ROOT = '/shared_data'
 MODELS_PATH = f'{PROJECT_ROOT}/Models'
-DATA_DIR = f'{PROJECT_ROOT}/data' 
+DATA_DIR = f'{PROJECT_ROOT}/dave' 
 METRICS_PATH = f'{PROJECT_ROOT}/metrics'
 SRC_PATH = f'{PROJECT_ROOT}/src'
 
 ML_DOCKER_IMAGE = Variable.get("ml_docker_image")
 
-DOCKER_NETWORK = 'airflow_airflow-network'
+DOCKER_NETWORK = 'Prediction-churn_airflow-network'
 
 # Task 1: Prepare workspace (ensure directories exist)
 prepare_workspace = BashOperator(
@@ -56,9 +58,8 @@ train_model = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mounts=[
         f'{MODELS_PATH}:/app/Models:bind',
-        f'{DATA_DIR}:/app/data:bind',
+        f'{DATA_DIR}:/app/dave:bind',
         f'{METRICS_PATH}:/app/metrics:bind',
-        f'{SRC_PATH}:/app/src:bind',
     ],
     environment={
         'PYTHONPATH': '/app',
@@ -77,7 +78,7 @@ evaluate_model = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mounts=[
         f'{MODELS_PATH}:/app/Models:bind',
-        f'{DATA_DIR}:/app/data:bind',
+        f'{DATA_DIR}:/app/dave:bind',
         f'{METRICS_PATH}:/app/metrics:bind',
         f'{SRC_PATH}:/app/src:bind',
     ],
@@ -98,7 +99,7 @@ log_experiments = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mounts=[
         f'{MODELS_PATH}:/app/Models:bind',
-        f'{DATA_DIR}:/app/data:bind',
+        f'{DATA_DIR}:/app/dave:bind',
         f'{METRICS_PATH}:/app/metrics:bind',
         f'{SRC_PATH}:/app/src:bind',
     ],
