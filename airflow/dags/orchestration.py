@@ -25,7 +25,7 @@ dag = DAG(
 
 PROJECT_ROOT = '/shared_data'
 MODELS_PATH = f'{PROJECT_ROOT}/Models'
-DATA_DIR = f'{PROJECT_ROOT}/dave' 
+DATA_DIR = f'{PROJECT_ROOT}/data' 
 METRICS_PATH = f'{PROJECT_ROOT}/metrics'
 SRC_PATH = f'{PROJECT_ROOT}/src'
 

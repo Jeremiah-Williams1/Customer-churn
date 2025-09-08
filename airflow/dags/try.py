@@ -1,5 +1,3 @@
-# ossssssssssssssssssssssssssssssssssssssssssssssssssssssss 
-
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
@@ -29,7 +27,7 @@ dag = DAG(
 
 PROJECT_ROOT = '/shared_data'
 MODELS_PATH = f'{PROJECT_ROOT}/Models'
-DATA_DIR = f'{PROJECT_ROOT}/dave' 
+DATA_DIR = f'{PROJECT_ROOT}/data' 
 METRICS_PATH = f'{PROJECT_ROOT}/metrics'
 SRC_PATH = f'{PROJECT_ROOT}/src'
 
@@ -60,7 +58,7 @@ train_model = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mounts=[
         f'{MODELS_PATH}:/app/Models:bind',
-        f'{DATA_DIR}:/app/dave:bind',
+        f'{DATA_DIR}:/app/data:bind',
         f'{METRICS_PATH}:/app/metrics:bind',
     ],
     environment={
@@ -80,7 +78,7 @@ evaluate_model = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mounts=[
         f'{MODELS_PATH}:/app/Models:bind',
-        f'{DATA_DIR}:/app/dave:bind',
+        f'{DATA_DIR}:/app/data:bind',
         f'{METRICS_PATH}:/app/metrics:bind',
         f'{SRC_PATH}:/app/src:bind',
     ],
@@ -101,7 +99,7 @@ log_experiments = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mounts=[
         f'{MODELS_PATH}:/app/Models:bind',
-        f'{DATA_DIR}:/app/dave:bind',
+        f'{DATA_DIR}:/app/data:bind',
         f'{METRICS_PATH}:/app/metrics:bind',
         f'{SRC_PATH}:/app/src:bind',
     ],
