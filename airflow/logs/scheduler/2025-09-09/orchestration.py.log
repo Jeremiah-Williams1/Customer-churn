@@ -394,3 +394,360 @@
 [2025-09-09T02:39:35.444+0000] {logging_mixin.py:188} INFO - [2025-09-09T02:39:35.444+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-09-09T02:39:35.506+0000] {logging_mixin.py:188} INFO - [2025-09-09T02:39:35.505+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
 [2025-09-09T02:39:35.592+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.331 seconds
+[2025-09-09T09:12:57.637+0000] {processor.py:161} INFO - Started process (PID=163) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:12:57.677+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:12:57.681+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:12:57.680+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:12:58.177+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:12:58.239+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:12:58.238+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:12:58.354+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:12:58.353+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:12:58.451+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.838 seconds
+[2025-09-09T09:13:28.878+0000] {processor.py:161} INFO - Started process (PID=178) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:13:28.883+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:13:28.890+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:13:28.887+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:13:29.019+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:13:32.119+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:13:32.118+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:13:32.185+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:13:32.184+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:13:32.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 3.447 seconds
+[2025-09-09T09:14:02.725+0000] {processor.py:161} INFO - Started process (PID=193) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:14:02.731+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:14:02.737+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:14:02.736+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:14:02.868+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:14:02.929+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:14:02.928+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:14:02.999+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:14:02.999+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:14:03.129+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.425 seconds
+[2025-09-09T09:14:33.598+0000] {processor.py:161} INFO - Started process (PID=208) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:14:33.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:14:33.609+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:14:33.607+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:14:34.064+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:14:34.282+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:14:34.281+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:14:34.368+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:14:34.367+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:14:34.440+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.864 seconds
+[2025-09-09T09:15:04.959+0000] {processor.py:161} INFO - Started process (PID=223) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:15:04.964+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:15:04.970+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:15:04.968+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:15:05.128+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:15:05.216+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:15:05.216+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:15:05.293+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:15:05.292+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:15:05.418+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.469 seconds
+[2025-09-09T09:15:35.975+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:15:35.979+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:15:35.983+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:15:35.982+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:15:36.145+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:15:36.205+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:15:36.205+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:15:36.293+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:15:36.292+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:15:36.911+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.951 seconds
+[2025-09-09T09:16:07.485+0000] {processor.py:161} INFO - Started process (PID=253) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:16:07.491+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:16:07.495+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:16:07.494+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:16:07.637+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:16:07.740+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:16:07.740+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:16:07.820+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:16:07.818+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:16:08.086+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.616 seconds
+[2025-09-09T09:16:38.697+0000] {processor.py:161} INFO - Started process (PID=277) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:16:38.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:16:38.707+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:16:38.705+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:16:38.832+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:16:38.895+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:16:38.894+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:16:38.981+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:16:38.981+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:16:39.049+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.368 seconds
+[2025-09-09T09:17:09.660+0000] {processor.py:161} INFO - Started process (PID=292) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:17:09.673+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:17:09.692+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:17:09.691+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:17:09.885+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:17:09.952+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:17:09.951+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:17:10.037+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:17:10.037+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:17:10.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.568 seconds
+[2025-09-09T09:17:40.819+0000] {processor.py:161} INFO - Started process (PID=307) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:17:40.825+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:17:40.834+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:17:40.833+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:17:40.973+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:17:41.052+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:17:41.051+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:17:41.162+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:17:41.161+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:17:41.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.416 seconds
+[2025-09-09T09:18:11.740+0000] {processor.py:161} INFO - Started process (PID=322) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:18:11.745+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:18:11.748+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:18:11.748+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:18:11.932+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:18:12.023+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:18:12.021+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:18:12.129+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:18:12.128+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:18:12.245+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.520 seconds
+[2025-09-09T09:18:42.796+0000] {processor.py:161} INFO - Started process (PID=337) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:18:42.802+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:18:42.808+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:18:42.806+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:18:42.934+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:18:42.981+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:18:42.981+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:18:43.045+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:18:43.045+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:18:43.094+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.323 seconds
+[2025-09-09T09:19:13.584+0000] {processor.py:161} INFO - Started process (PID=352) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:19:13.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:19:13.593+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:19:13.592+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:19:13.775+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:19:13.852+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:19:13.852+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:19:13.914+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:19:13.913+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:19:14.002+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.432 seconds
+[2025-09-09T09:19:44.522+0000] {processor.py:161} INFO - Started process (PID=367) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:19:44.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:19:44.530+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:19:44.529+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:19:44.635+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:19:44.692+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:19:44.692+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:19:45.164+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:19:45.163+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:19:45.222+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.712 seconds
+[2025-09-09T09:20:15.711+0000] {processor.py:161} INFO - Started process (PID=382) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:20:15.715+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:20:15.720+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:20:15.718+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:20:15.818+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:20:15.874+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:20:15.873+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:20:15.952+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:20:15.939+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:20:16.095+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.407 seconds
+[2025-09-09T09:20:46.553+0000] {processor.py:161} INFO - Started process (PID=397) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:20:46.567+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:20:46.570+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:20:46.569+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:20:46.719+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:20:46.840+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:20:46.840+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:20:46.961+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:20:46.960+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:20:47.109+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.570 seconds
+[2025-09-09T09:21:17.574+0000] {processor.py:161} INFO - Started process (PID=412) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:21:17.579+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:21:17.585+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:21:17.583+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:21:17.695+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:21:17.749+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:21:17.749+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:21:17.816+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:21:17.815+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:21:17.884+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.326 seconds
+[2025-09-09T09:21:48.534+0000] {processor.py:161} INFO - Started process (PID=429) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:21:48.540+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:21:48.551+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:21:48.549+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:21:48.678+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:21:48.721+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:21:48.720+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:21:48.802+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:21:48.801+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:21:48.879+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.370 seconds
+[2025-09-09T09:22:19.336+0000] {processor.py:161} INFO - Started process (PID=444) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:22:19.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:22:19.348+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:22:19.347+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:22:19.467+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:22:19.531+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:22:19.530+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:22:19.636+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:22:19.635+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:22:19.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.416 seconds
+[2025-09-09T09:22:50.300+0000] {processor.py:161} INFO - Started process (PID=459) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:22:50.304+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:22:50.313+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:22:50.310+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:22:50.425+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:22:50.494+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:22:50.494+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:22:50.568+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:22:50.567+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:22:50.642+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.357 seconds
+[2025-09-09T09:23:21.281+0000] {processor.py:161} INFO - Started process (PID=483) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:23:21.287+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:23:21.295+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:23:21.294+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:23:21.428+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:23:22.016+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:23:22.015+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:23:22.072+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:23:22.072+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:23:22.216+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.962 seconds
+[2025-09-09T09:23:52.636+0000] {processor.py:161} INFO - Started process (PID=498) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:23:52.643+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:23:52.648+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:23:52.646+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:23:52.838+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:23:52.892+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:23:52.892+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:23:52.980+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:23:52.979+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:23:53.254+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.633 seconds
+[2025-09-09T09:24:23.772+0000] {processor.py:161} INFO - Started process (PID=513) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:24:23.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:24:23.783+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:24:23.782+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:24:23.932+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:24:24.023+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:24:24.021+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:24:24.116+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:24:24.115+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:24:24.167+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.420 seconds
+[2025-09-09T09:24:54.677+0000] {processor.py:161} INFO - Started process (PID=528) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:24:54.682+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:24:54.686+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:24:54.685+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:24:54.814+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:24:54.922+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:24:54.922+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:24:55.021+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:24:55.021+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:24:55.108+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.457 seconds
+[2025-09-09T09:25:25.604+0000] {processor.py:161} INFO - Started process (PID=543) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:25:25.610+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:25:25.615+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:25:25.614+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:25:25.739+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:25:25.803+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:25:25.802+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:25:25.866+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:25:25.866+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:25:25.922+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.329 seconds
+[2025-09-09T09:25:56.468+0000] {processor.py:161} INFO - Started process (PID=558) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:25:56.471+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:25:56.477+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:25:56.475+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:25:56.650+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:25:56.695+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:25:56.694+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:25:56.755+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:25:56.754+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:25:56.835+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.403 seconds
+[2025-09-09T09:26:27.346+0000] {processor.py:161} INFO - Started process (PID=573) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:26:27.351+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:26:27.355+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:26:27.354+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:26:27.468+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:26:27.525+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:26:27.525+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:26:27.579+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:26:27.579+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:26:27.648+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.327 seconds
+[2025-09-09T09:26:58.239+0000] {processor.py:161} INFO - Started process (PID=588) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:26:58.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:26:58.256+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:26:58.245+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:26:58.664+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:26:58.885+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:26:58.885+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:26:59.110+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:26:59.110+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:26:59.493+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.278 seconds
+[2025-09-09T09:27:30.056+0000] {processor.py:161} INFO - Started process (PID=603) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:27:30.061+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:27:30.065+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:27:30.064+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:27:30.175+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:27:30.238+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:27:30.238+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:27:30.307+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:27:30.306+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:27:30.414+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.379 seconds
+[2025-09-09T09:28:00.929+0000] {processor.py:161} INFO - Started process (PID=618) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:28:00.933+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:28:00.938+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:28:00.937+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:28:01.051+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:28:01.104+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:28:01.103+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:28:01.165+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:28:01.164+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:28:01.253+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.339 seconds
+[2025-09-09T09:28:31.771+0000] {processor.py:161} INFO - Started process (PID=635) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:28:31.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:28:31.782+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:28:31.780+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:28:31.987+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:28:32.053+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:28:32.052+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:28:32.170+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:28:32.169+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:28:32.246+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.489 seconds
+[2025-09-09T09:29:02.820+0000] {processor.py:161} INFO - Started process (PID=650) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:29:02.824+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:29:02.834+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:29:02.833+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:29:02.968+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:29:03.034+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:29:03.033+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:29:03.106+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:29:03.105+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:29:03.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.428 seconds
+[2025-09-09T09:29:33.965+0000] {processor.py:161} INFO - Started process (PID=665) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:29:33.975+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:29:33.981+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:29:33.980+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:29:34.097+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:29:34.156+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:29:34.155+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:29:34.215+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:29:34.214+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:29:34.280+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.339 seconds
+[2025-09-09T09:30:04.841+0000] {processor.py:161} INFO - Started process (PID=680) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:30:04.845+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:30:04.849+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:30:04.848+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:30:05.029+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:30:05.095+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:30:05.094+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:30:05.157+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:30:05.157+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:30:05.221+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.392 seconds
+[2025-09-09T09:30:35.679+0000] {processor.py:161} INFO - Started process (PID=695) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:30:35.691+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:30:35.694+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:30:35.694+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:30:35.878+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:30:35.972+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:30:35.971+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:30:36.079+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:30:36.078+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:30:36.182+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.523 seconds
+[2025-09-09T09:31:06.578+0000] {processor.py:161} INFO - Started process (PID=710) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:31:06.588+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:31:06.593+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:31:06.592+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:31:06.789+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:31:06.871+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:31:06.870+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:31:06.987+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:31:06.987+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:31:07.117+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.549 seconds
+[2025-09-09T09:31:37.685+0000] {processor.py:161} INFO - Started process (PID=725) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:31:37.692+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:31:37.700+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:31:37.697+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:31:37.829+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:31:37.881+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:31:37.880+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:31:37.962+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:31:37.961+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:31:38.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.353 seconds
+[2025-09-09T09:32:08.482+0000] {processor.py:161} INFO - Started process (PID=740) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:32:08.489+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:32:08.498+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:32:08.496+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:32:08.617+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:32:08.680+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:32:08.679+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:32:08.748+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:32:08.748+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:32:08.967+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.437 seconds
+[2025-09-09T09:32:39.568+0000] {processor.py:161} INFO - Started process (PID=755) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:32:39.573+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:32:39.580+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:32:39.578+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:32:39.726+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:32:39.777+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:32:39.776+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:32:39.851+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:32:39.850+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:32:40.023+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.483 seconds
+[2025-09-09T09:33:10.610+0000] {processor.py:161} INFO - Started process (PID=770) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:10.613+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:33:10.619+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:10.618+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:10.746+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:10.806+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:10.806+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:33:10.875+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:10.874+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:33:11.197+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.604 seconds
+[2025-09-09T09:33:14.901+0000] {processor.py:161} INFO - Started process (PID=785) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:14.903+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:33:14.907+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:14.906+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:15.228+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:15.325+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:15.322+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:33:15.422+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:15.421+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:33:15.899+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.009 seconds
+[2025-09-09T09:33:46.465+0000] {processor.py:161} INFO - Started process (PID=800) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:46.473+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:33:46.482+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:46.481+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:46.641+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:33:46.718+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:46.717+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:33:46.843+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:33:46.842+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:33:47.118+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.666 seconds
+[2025-09-09T09:34:17.606+0000] {processor.py:161} INFO - Started process (PID=823) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:34:17.609+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:34:17.614+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:34:17.613+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:34:17.693+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:34:17.769+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:34:17.768+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:34:17.890+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:34:17.890+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:34:18.045+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.450 seconds
+[2025-09-09T09:34:49.518+0000] {processor.py:161} INFO - Started process (PID=837) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:34:49.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:34:49.557+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:34:49.533+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:34:50.051+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:34:50.150+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:34:50.150+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:34:50.316+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:34:50.316+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:34:51.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.569 seconds
+[2025-09-09T09:35:22.169+0000] {processor.py:161} INFO - Started process (PID=847) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:35:22.174+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:35:22.187+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:35:22.185+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:35:22.568+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:35:22.655+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:35:22.655+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:35:22.756+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:35:22.755+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:35:24.078+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 1.897 seconds
+[2025-09-09T09:35:55.144+0000] {processor.py:161} INFO - Started process (PID=859) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:35:55.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:35:55.240+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:35:55.220+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:35:58.058+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:35:58.707+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:35:58.706+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:35:59.578+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:35:59.577+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:36:00.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 4.903 seconds
+[2025-09-09T09:36:30.280+0000] {processor.py:161} INFO - Started process (PID=874) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:36:30.285+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:36:30.288+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:36:30.287+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:36:30.477+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:36:30.567+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:36:30.567+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:36:30.690+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:36:30.690+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:36:31.028+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.765 seconds
+[2025-09-09T09:37:01.735+0000] {processor.py:161} INFO - Started process (PID=889) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:37:01.741+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:37:01.748+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:37:01.746+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:37:02.021+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:37:02.194+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:37:02.194+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:37:02.337+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:37:02.336+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:37:02.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.848 seconds
+[2025-09-09T09:37:33.053+0000] {processor.py:161} INFO - Started process (PID=904) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:37:33.060+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:37:33.069+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:37:33.067+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:37:33.261+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:37:33.309+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:37:33.308+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:37:33.363+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:37:33.362+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:37:33.542+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.510 seconds
+[2025-09-09T09:38:04.175+0000] {processor.py:161} INFO - Started process (PID=919) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:38:04.186+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:38:04.198+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:38:04.196+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:38:04.578+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:38:04.645+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:38:04.645+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:38:04.739+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:38:04.737+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:38:04.793+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.656 seconds
+[2025-09-09T09:38:35.204+0000] {processor.py:161} INFO - Started process (PID=934) to work on /opt/airflow/dags/orchestration.py
+[2025-09-09T09:38:35.209+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/orchestration.py for tasks to queue
+[2025-09-09T09:38:35.212+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:38:35.211+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:38:35.346+0000] {processor.py:840} INFO - DAG(s) 'ml_pipeline_orchestration' retrieved from /opt/airflow/dags/orchestration.py
+[2025-09-09T09:38:35.396+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:38:35.395+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-09T09:38:35.458+0000] {logging_mixin.py:188} INFO - [2025-09-09T09:38:35.458+0000] {dag.py:3823} INFO - Setting next_dagrun for ml_pipeline_orchestration to 2025-09-09 00:00:00+00:00, run_after=2025-09-10 00:00:00+00:00
+[2025-09-09T09:38:35.562+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/orchestration.py took 0.369 seconds

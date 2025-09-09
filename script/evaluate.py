@@ -42,8 +42,8 @@ def main():
     
     # Load and prepare data
     print("\n1. Loading the test dataset...")
-    X_test = load_data('dave/processed/X_test.csv')
-    y_test = load_data('dave/processed/y_test.csv')
+    X_test = load_data('data/processed/X_test.csv')
+    y_test = load_data('data/processed/y_test.csv')
 
 
     

@@ -31,7 +31,7 @@ SRC_PATH = f'{PROJECT_ROOT}/src'
 
 ML_DOCKER_IMAGE = Variable.get("ml_docker_image", default_var="972111245465383674563253/prediction-app:latest")
 
-DOCKER_NETWORK = Variable.get("docker_network", default_var="Customer-churn_airflow-network")
+DOCKER_NETWORK = Variable.get("docker_network", default_var="airflow-network")
 
 # Task 1: Prepare workspace (ensure directories exist)
 prepare_workspace = BashOperator(

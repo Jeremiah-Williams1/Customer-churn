@@ -1,0 +1,42 @@
+[2025-09-09T09:28:24.197+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-09T09:23:02.086273+00:00 [queued]>
+[2025-09-09T09:28:24.236+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-09T09:23:02.086273+00:00 [queued]>
+[2025-09-09T09:28:24.238+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-09-09T09:28:24.310+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): train_model> on 2025-09-09 09:23:02.086273+00:00
+[2025-09-09T09:28:24.320+0000] {standard_task_runner.py:60} INFO - Started process 634 to run task
+[2025-09-09T09:28:24.330+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'train_model', 'manual__2025-09-09T09:23:02.086273+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmpqje854oq']
+[2025-09-09T09:28:24.337+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask train_model
+[2025-09-09T09:28:24.509+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-09T09:23:02.086273+00:00 [running]> on host fa05fe96003d
+[2025-09-09T09:28:24.885+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-09T09:23:02.086273+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-09T09:23:02.086273+00:00'
+[2025-09-09T09:28:25.118+0000] {docker.py:359} INFO - Starting docker container from image 972111245465383674563253/prediction-app:latest
+[2025-09-09T09:28:29.060+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/docker/api/client.py", line 265, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/containers/b9e56b037fadea26ac844d57630274bf2efa80d56129af2dc2e49af6f266c363/start
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 502, in execute
+    return self._run_image()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 376, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/docker/operators/docker.py", line 423, in _run_image_with_mounts
+    self.cli.start(self.container["Id"])
+  File "/home/airflow/.local/lib/python3.8/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/docker/api/container.py", line 1135, in start
+    self._raise_for_status(res)
+  File "/home/airflow/.local/lib/python3.8/site-packages/docker/api/client.py", line 267, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+  File "/home/airflow/.local/lib/python3.8/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.51/containers/b9e56b037fadea26ac844d57630274bf2efa80d56129af2dc2e49af6f266c363/start: Not Found ("failed to set up container networking: network Customer-churn_airflow-network not found")
+[2025-09-09T09:28:29.395+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=ml_pipeline_orchestration, task_id=train_model, execution_date=20250909T092302, start_date=20250909T092824, end_date=20250909T092829
+[2025-09-09T09:28:29.500+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 14 for task train_model (404 Client Error for http+docker://localhost/v1.51/containers/b9e56b037fadea26ac844d57630274bf2efa80d56129af2dc2e49af6f266c363/start: Not Found ("failed to set up container networking: network Customer-churn_airflow-network not found"); 634)
+[2025-09-09T09:28:29.620+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-09T09:28:29.722+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
