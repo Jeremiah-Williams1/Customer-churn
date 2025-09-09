@@ -66,4 +66,4 @@ jobs:
           context: .
           file: ./Dockerfile.app
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/prediction-app:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/prediction-apps:latest

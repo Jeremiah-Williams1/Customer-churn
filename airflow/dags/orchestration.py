@@ -29,7 +29,7 @@ DATA_DIR = f'{PROJECT_ROOT}/data'
 METRICS_PATH = f'{PROJECT_ROOT}/metrics'
 SRC_PATH = f'{PROJECT_ROOT}/src'
 
-ML_DOCKER_IMAGE = Variable.get("ml_docker_image", default_var="972111245465383674563253/prediction-app:latest")
+ML_DOCKER_IMAGE = Variable.get("ml_docker_image", default_var="972111245465383674563253/prediction-apps:latest")
 
 DOCKER_NETWORK = Variable.get("docker_network", default_var="airflow-network")
 
