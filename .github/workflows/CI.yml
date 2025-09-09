@@ -64,5 +64,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./Dockerfile.app
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/prediction-app:latest
