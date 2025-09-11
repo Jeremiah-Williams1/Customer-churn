@@ -1,0 +1,54 @@
+[2025-09-09T16:00:34.353+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-09T16:00:25.081797+00:00 [queued]>
+[2025-09-09T16:00:34.372+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-09T16:00:25.081797+00:00 [queued]>
+[2025-09-09T16:00:34.374+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-09T16:00:34.420+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): train_model> on 2025-09-09 16:00:25.081797+00:00
+[2025-09-09T16:00:34.429+0000] {standard_task_runner.py:60} INFO - Started process 546 to run task
+[2025-09-09T16:00:34.444+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'train_model', 'manual__2025-09-09T16:00:25.081797+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmp1c2c335c']
+[2025-09-09T16:00:34.451+0000] {standard_task_runner.py:88} INFO - Job 33: Subtask train_model
+[2025-09-09T16:00:34.634+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-09T16:00:25.081797+00:00 [running]> on host 144ecaef205c
+[2025-09-09T16:00:35.034+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-09T16:00:25.081797+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-09T16:00:25.081797+00:00'
+[2025-09-09T16:00:35.405+0000] {docker.py:359} INFO - Starting docker container from image 972111245465383674563253/prediction-apps:latest
+[2025-09-09T16:01:24.624+0000] {docker.py:429} INFO - /app/src/data/clean_data.py:26: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  median_by_tenure = df_clean.groupby(pd.cut(df_clean['tenure'], bins=[0, 12, 24, 48, 72]))['total_charges'].median()
+[2025-09-09T16:01:28.188+0000] {docker.py:429} INFO - === CUSTOMER CHURN PREDICTION TRAINING ===
+
+1. Loading data...
+Loaded 5000 rows and 14 columns
+
+2. Cleaning data...
+Starting data cleaning...
+Removed 0 duplicate rows
+Data cleaning completed
+Removed 293 outliers from total_charges
+Data cleaning completed. Final shape: (4707, 14)
+
+3. Transforming data...
+Starting data transformation...
+Fitted encoder for gender
+Fitted encoder for contract
+Fitted encoder for internet_service
+Fitted encoder for online_security
+Fitted encoder for tech_support
+Fitted encoder for streaming_tv
+Fitted encoder for payment_method
+Fitted encoder for paperless_billing
+Train set: 3765 samples
+Test set: 942 samples
+All transformers saved to /app/Models/transformers.joblib
+Data transformation completed
+
+4. Training models...
+Training logistic_regression...
+[2025-09-09T16:07:04.845+0000] {docker.py:429} INFO - Best CV score: 0.7259
+Model saved to /app/Models/logistic_regression.joblib
+Training random_forest...
+Best CV score: 0.7242
+Model saved to /app/Models/random_forest.joblib
+Training Gradient_Boosting...
+Best CV score: 0.7233
+Model saved to /app/Models/Gradient_Boosting.joblib
+
+Training completed! 3 models trained and saved.
+[2025-09-09T16:07:18.203+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_orchestration, task_id=train_model, execution_date=20250909T160025, start_date=20250909T160034, end_date=20250909T160718
+[2025-09-09T16:07:19.033+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-09T16:07:22.919+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

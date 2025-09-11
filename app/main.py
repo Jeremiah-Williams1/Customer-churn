@@ -3,12 +3,15 @@ from pathlib import Path
 from fastapi import FastAPI
 from .schema_model import Churn_Input
 import pandas as pd
+from prometheus_fastapi_instrumentator import Instrumentator
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from src.data.transform_data import preprocess_new_data
 from Models import load_file
 
 app = FastAPI()
+
+Instrumentator().instrument(app).expose(app)
 
 model = load_file('random_forest.joblib')
 

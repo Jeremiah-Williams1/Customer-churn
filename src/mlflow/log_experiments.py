@@ -17,7 +17,7 @@ from src.data.load_data import load_data
 from mlflow_setup import setup_mlflow
 import mlflow
 
-def log_experiment_tracking(reports, X_train):
+def log_experiment_tracking(reports):
     """
     Logs each model's metrics and parameters to MLflow.
     """
@@ -63,10 +63,9 @@ def main():
     """Main Experiement tracking function"""
     print('\n Logging the Experiements')
 
-    X_train = load_data('data/processed/X_train.csv')
     reports = joblib.load(Path(__file__).parent.parent.parent / 'metrics' / 'Report.joblib')
 
-    log_experiment_tracking(reports, X_train)
+    log_experiment_tracking(reports)
 
 if __name__ == "__main__":
     main()

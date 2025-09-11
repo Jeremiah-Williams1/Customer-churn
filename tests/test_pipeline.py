@@ -24,4 +24,3 @@ def test_end_to_end_pipeline():
 
     assert acc > 0.6 
 
-test_end_to_end_pipeline()

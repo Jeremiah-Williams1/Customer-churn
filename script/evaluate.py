@@ -1,6 +1,4 @@
 import sys
-import os
-import mlflow
 import joblib
 from pathlib import Path
 import pandas as pd

@@ -18,7 +18,7 @@ def test_transform_data():
     assert "churn" in df.columns, "Target column missing"
 
     clean = clean_data(df)
-    X_train, X_test, y_train, y_test = transform_data(clean)
+    X_train, X_test, y_train, y_test = transform_data(clean, training=False)
 
 
     # 1. Assert shapes
@@ -44,5 +44,3 @@ def test_transform_data():
         assert clean[i].isnull().sum() == 0, f"Missing values found in column: {i}"
 
 
-
-test_transform_data()
