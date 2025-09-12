@@ -1,0 +1,36 @@
+[2025-09-12T00:59:26.696+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.log_experiments manual__2025-09-12T00:52:55.790670+00:00 [queued]>
+[2025-09-12T00:59:26.726+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.log_experiments manual__2025-09-12T00:52:55.790670+00:00 [queued]>
+[2025-09-12T00:59:26.728+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-12T00:59:26.808+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): log_experiments> on 2025-09-12 00:52:55.790670+00:00
+[2025-09-12T00:59:26.820+0000] {standard_task_runner.py:60} INFO - Started process 1243 to run task
+[2025-09-12T00:59:26.832+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'log_experiments', 'manual__2025-09-12T00:52:55.790670+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmpn4o6j9eh']
+[2025-09-12T00:59:26.839+0000] {standard_task_runner.py:88} INFO - Job 84: Subtask log_experiments
+[2025-09-12T00:59:27.026+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.log_experiments manual__2025-09-12T00:52:55.790670+00:00 [running]> on host 10edecd9c410
+[2025-09-12T00:59:27.365+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='log_experiments' AIRFLOW_CTX_EXECUTION_DATE='2025-09-12T00:52:55.790670+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-12T00:52:55.790670+00:00'
+[2025-09-12T00:59:27.622+0000] {docker.py:359} INFO - Starting docker container from image 972111245465383674563253/prediction-apps:latest
+[2025-09-12T00:59:37.949+0000] {docker.py:429} INFO - /usr/local/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources  # noqa: TID251
+[2025-09-12T00:59:46.310+0000] {docker.py:429} INFO - 2025/09/12 00:59:46 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-09-12T01:01:00.439+0000] {docker.py:429} INFO - Logging the Experiements
+Successfully logged experiment for logistic_regression
+Successfully logged experiment for random_forest
+Successfully logged experiment for Gradient_Boosting
+Successfully logged 3 experiments
+[2025-09-12T01:01:03.760+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_orchestration, task_id=log_experiments, execution_date=20250912T005255, start_date=20250912T005926, end_date=20250912T010103
+[2025-09-12T01:01:03.882+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-12T01:01:03.946+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -89,7 +89,6 @@ log_experiments = DockerOperator(
     dag=dag,
 )
 
-# Optional: Task to summarize results
 def summarize_results():
     """Python function to summarize the pipeline results"""
     import os
@@ -115,17 +114,5 @@ summarize_pipeline = PythonOperator(
     dag=dag,
 )
 
-# Optional: Cleanup task
-cleanup = BashOperator(
-    task_id='cleanup_temp_files',
-    bash_command=f'''
-    echo "Cleaning up temporary files..."
-    # Remove any temporary files but keep models and metrics
-    find {MODELS_PATH} -name "*.tmp" -delete 2>/dev/null || true
-    echo "Cleanup completed at $(date)" >> {MODELS_PATH}/pipeline_log.txt
-    ''',
-    dag=dag,
-)
-
 # Define task dependencies
-prepare_workspace >> train_model >> evaluate_model >> log_experiments >> summarize_pipeline >> cleanup
+prepare_workspace >> train_model >> evaluate_model >> log_experiments >> summarize_pipeline 

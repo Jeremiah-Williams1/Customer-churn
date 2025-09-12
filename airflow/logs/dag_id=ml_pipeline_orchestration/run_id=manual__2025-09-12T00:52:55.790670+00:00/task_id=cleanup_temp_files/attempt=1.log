@@ -1,0 +1,17 @@
+[2025-09-12T01:01:11.569+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.cleanup_temp_files manual__2025-09-12T00:52:55.790670+00:00 [queued]>
+[2025-09-12T01:01:11.598+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.cleanup_temp_files manual__2025-09-12T00:52:55.790670+00:00 [queued]>
+[2025-09-12T01:01:11.599+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-12T01:01:11.658+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): cleanup_temp_files> on 2025-09-12 00:52:55.790670+00:00
+[2025-09-12T01:01:11.668+0000] {standard_task_runner.py:60} INFO - Started process 1307 to run task
+[2025-09-12T01:01:11.679+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'cleanup_temp_files', 'manual__2025-09-12T00:52:55.790670+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmpmhtbks2a']
+[2025-09-12T01:01:11.684+0000] {standard_task_runner.py:88} INFO - Job 86: Subtask cleanup_temp_files
+[2025-09-12T01:01:11.849+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.cleanup_temp_files manual__2025-09-12T00:52:55.790670+00:00 [running]> on host 10edecd9c410
+[2025-09-12T01:01:12.164+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='cleanup_temp_files' AIRFLOW_CTX_EXECUTION_DATE='2025-09-12T00:52:55.790670+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-12T00:52:55.790670+00:00'
+[2025-09-12T01:01:12.169+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-12T01:01:12.172+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    echo "Cleaning up temporary files..."\n    # Remove any temporary files but keep models and metrics\n    find /shared_data/Models -name "*.tmp" -delete 2>/dev/null || true\n    echo "Cleanup completed at $(date)" >> /shared_data/Models/pipeline_log.txt\n    ']
+[2025-09-12T01:01:12.248+0000] {subprocess.py:86} INFO - Output:
+[2025-09-12T01:01:12.839+0000] {subprocess.py:93} INFO - Cleaning up temporary files...
+[2025-09-12T01:01:13.085+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-12T01:01:13.203+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_orchestration, task_id=cleanup_temp_files, execution_date=20250912T005255, start_date=20250912T010111, end_date=20250912T010113
+[2025-09-12T01:01:13.306+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-12T01:01:13.355+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
