@@ -1,4 +1,3 @@
-
 services:
   postgres:
     image: postgres:14
@@ -9,7 +8,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - airflow-network
+      - default
 
   airflow-webserver:
     build: ./airflow
@@ -22,18 +21,13 @@ services:
       - AIRFLOW__WEBSERVER__SECRET_KEY=124fasdh3hdshfagh93uoi233ew5
     volumes:
       - ./airflow/dags:/opt/airflow/dags
-      - ./airflow/logs:/opt/airflow/logs        # Add logs volume
-      - ./airflow/plugins:/opt/airflow/plugins  # Add plugins volume
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
 
       - ./Models:/shared_data/Models
       - ./data:/shared_data/data
       - ./metrics:/shared_data/metrics
       - ./src:/shared_data/src
-
-      - ./Models:/app/Models
-      - ./metrics:/app/metrics
-      - ./data:/app/data
-      - ./src:/app/src
 
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
@@ -47,7 +41,7 @@ services:
     depends_on:
       - postgres
     networks:
-      - airflow-network
+      - default
 
   airflow-scheduler:
     image: airflow:latest
@@ -62,27 +56,23 @@ services:
       - AIRFLOW__WEBSERVER__SECRET_KEY=124fasdh3hdshfagh93uoi233ew5
     volumes:
       - ./airflow/dags:/opt/airflow/dags
-      - ./airflow/logs:/opt/airflow/logs        # Add logs volume
-      - ./airflow/plugins:/opt/airflow/plugins  # Add plugins volume
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
 
       - ./Models:/shared_data/Models
       - ./data:/shared_data/data
       - ./metrics:/shared_data/metrics
       - ./src:/shared_data/src
 
-      - ./Models:/app/Models
-      - ./metrics:/app/metrics
-      - ./data:/app/data
-      - ./src:/app/src
-      
       - /var/run/docker.sock:/var/run/docker.sock
     command: airflow scheduler
     networks:
-      - airflow-network
+      - default
 
 volumes:
   postgres_data:
 
 networks:
-  airflow-network:
-    driver: bridge
+  default:
+    external: true
+    name: mlops-net

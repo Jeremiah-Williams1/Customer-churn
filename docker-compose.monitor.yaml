@@ -4,25 +4,90 @@ services:
     ports:
       - "8000:8000" 
     networks:
-      - monitoring
+      - default
+
+  postgres:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB: admin_db
+      - POSTGRES_USER: admin
+      - POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
 
   prometheus:
     image: prom/prometheus:latest
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
     ports:
       - "9090:9090"
     networks:
-      - monitoring
+      - default
+
+  pushgateway:
+    image: prom/pushgateway
+    ports:
+      - "9091:9091"
+    networks:
+      - default
 
   grafana:
     image: grafana/grafana:9.0.0
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
     ports:
       - "3000:3000"
     networks:
-      - monitoring
+      - default
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    ports:
+      - "9100:9100"
+    networks:
+      - default
+    command:
+      - '--path.rootfs=/host'
+    volumes:
+      - /:/host:ro,rslave
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:latest
+    environment:
+      - DATA_SOURCE_NAME=postgresql://monitoring:monitoring@postgress:5432/monitoring?sslmode=disable
+    ports:
+      - "9187:9187"
+    networks:
+      - default
+    depends_on:
+      - postgress
+
+  cadvisor:
+    image: gcr.io/google-containers/cadvisor:latest
+    ports:
+      - "8081:8080"
+    networks:
+      - default
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+
+volumes:
+  postgres_data:
+  prometheus_data:
+  grafana_data:
 
 networks:
-  monitoring:
+  default:
+    external: true
+    name: mlops-net

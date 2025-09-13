@@ -30,8 +30,7 @@ METRICS_PATH = f'{PROJECT_ROOT}/metrics'
 SRC_PATH = f'{PROJECT_ROOT}/src'
 
 ML_DOCKER_IMAGE = Variable.get("ml_docker_image", default_var="972111245465383674563253/prediction-apps:latest")
-
-DOCKER_NETWORK = Variable.get("docker_network", default_var="airflow-network")
+DOCKER_NETWORK = Variable.get("docker_network", default_var="mlops-net")
 
 # Task 1: Prepare workspace (ensure directories exist)
 prepare_workspace = BashOperator(
@@ -45,17 +44,26 @@ prepare_workspace = BashOperator(
     dag=dag,
 )
 
+# volume configuration
+docker_volumes = [
+    f"{MODELS_PATH}:/app/Models",
+    f"{DATA_DIR}:/app/data",
+    f"{METRICS_PATH}:/app/metrics",
+    f"{SRC_PATH}:/app/src"
+]
+
 # Task 2: Train the model
 train_model = DockerOperator(
     task_id='train_model',
     image=ML_DOCKER_IMAGE,
-    command=['python', 'script/train.py'],  # Use list format
+    command=['python', 'script/train.py'],  
     api_version='auto',
     auto_remove=True,
     docker_url='unix://var/run/docker.sock',
     network_mode=DOCKER_NETWORK,
     mount_tmp_dir=False,
     host_tmp_dir='/tmp',
+    volumes=docker_volumes,
     working_dir='/app',
     environment={'PYTHONPATH': '/app'},
     dag=dag,
@@ -72,6 +80,8 @@ evaluate_model = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mount_tmp_dir=False,
     container_name='ml_evaluate_{{ ds_nodash }}_{{ ts_nodash }}',
+    volumes=docker_volumes,
+    working_dir='/app',
     dag=dag,
 )
 
@@ -86,6 +96,8 @@ log_experiments = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mount_tmp_dir=False,
     container_name='ml_log_{{ ds_nodash }}_{{ ts_nodash }}',
+    volumes=docker_volumes,
+    working_dir='/app',
     dag=dag,
 )
 
@@ -115,4 +127,4 @@ summarize_pipeline = PythonOperator(
 )
 
 # Define task dependencies
-prepare_workspace >> train_model >> evaluate_model >> log_experiments >> summarize_pipeline 
+prepare_workspace >> train_model >> evaluate_model >> log_experiments >> summarize_pipeline
