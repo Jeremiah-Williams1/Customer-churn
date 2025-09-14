@@ -53,13 +53,14 @@ def collect_eval_metrics():
     
     return registry, eval_duration, models_accuracy, models_recall
 
-def push_metrics(registry, job_name='customer_churn_training'):
+def push_eval_metrics(registry, job_name='customer_churn_evaluation'):
     """Push metrics to Pushgateway"""
     try:
         push_to_gateway('localhost:9091', job=job_name, registry=registry)
         print("Metrics pushed to Pushgateway successfully")
     except Exception as e:
-        print(f"Failed to push_eval_metrics: {e}")
+        print(f"Failed to push metrics: {e}")
+
 
 def main():
     """Main evaluation pipeline"""
@@ -91,8 +92,7 @@ def main():
             # Push evaluation metrics to Prometheus
             models_accuracy.labels(model_name=model_name).set(metrics['Accuracy'])
             models_recall.labels(model_name=model_name).set(metrics['Recall'])
-            push_metrics(registry)
-            
+            push_eval_metrics(registry)
 
             results.append(metrics)
             print(f"\n{model_name} Results:")

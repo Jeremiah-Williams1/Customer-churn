@@ -3,12 +3,13 @@ from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
-from airflow.models import Variable 
+from airflow.models import Variable
+from docker.types import Mount
 import os
 
 # Default arguments for the DAG
 default_args = {
-    'owner': 'Jerr-williams',
+    'owner': 'Jeremiah-williams',
     'start_date': datetime(2025, 1, 1),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
@@ -44,17 +45,26 @@ prepare_workspace = BashOperator(
     dag=dag,
 )
 
+# Mount configuration using docker.types.Mount
+docker_mounts = [
+    Mount(source=MODELS_PATH, target='/app/Models', type='bind'),
+    Mount(source=DATA_DIR, target='/app/data', type='bind'),
+    Mount(source=METRICS_PATH, target='/app/metrics', type='bind'),
+    Mount(source=SRC_PATH, target='/app/src', type='bind')
+]
+
 # Task 2: Train the model
 train_model = DockerOperator(
     task_id='train_model',
     image=ML_DOCKER_IMAGE,
-    command=['python', 'script/train.py'],  # Use list format
+    command=['python', 'script/train.py'],  
     api_version='auto',
     auto_remove=True,
     docker_url='unix://var/run/docker.sock',
     network_mode=DOCKER_NETWORK,
     mount_tmp_dir=False,
     host_tmp_dir='/tmp',
+    mounts=docker_mounts,  # Use mounts instead of volumes
     working_dir='/app',
     environment={'PYTHONPATH': '/app'},
     dag=dag,
@@ -71,6 +81,8 @@ evaluate_model = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mount_tmp_dir=False,
     container_name='ml_evaluate_{{ ds_nodash }}_{{ ts_nodash }}',
+    mounts=docker_mounts,  # Use mounts instead of volumes
+    working_dir='/app',
     dag=dag,
 )
 
@@ -85,6 +97,8 @@ log_experiments = DockerOperator(
     network_mode=DOCKER_NETWORK,
     mount_tmp_dir=False,
     container_name='ml_log_{{ ds_nodash }}_{{ ts_nodash }}',
+    mounts=docker_mounts,  # Use mounts instead of volumes
+    working_dir='/app',
     dag=dag,
 )
 
