@@ -9,9 +9,9 @@ services:
   postgres:
     image: postgres:14
     environment:
-      POSTGRES_DB: admin_db
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: airflow
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
     ports:
       - "5432:5432"
     networks:
@@ -75,21 +75,6 @@ services:
       - default
     depends_on:
       - postgres
-
-  cadvisor:
-    image: gcr.io/google-containers/cadvisor:latest
-    ports:
-      - "8081:8080"
-    networks:
-      - default
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-    privileged: true 
-    restart: unless-stopped
-
     
 volumes:
   postgres_data:

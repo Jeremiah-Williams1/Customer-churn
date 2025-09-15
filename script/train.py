@@ -78,7 +78,7 @@ def create_metrics():
 def push_metrics(registry, job_name='customer_churn_training'):
     """Push metrics to Pushgateway"""
     try:
-        push_to_gateway('localhost:9091', job=job_name, registry=registry)
+        push_to_gateway('http://pushgateway:9091', job=job_name, registry=registry)
         print("Metrics pushed to Pushgateway successfully")
     except Exception as e:
         print(f"Failed to push metrics: {e}")

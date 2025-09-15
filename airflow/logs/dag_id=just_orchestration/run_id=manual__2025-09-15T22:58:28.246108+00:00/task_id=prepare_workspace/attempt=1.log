@@ -1,0 +1,28 @@
+[2025-09-15T22:58:30.959+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: just_orchestration.prepare_workspace manual__2025-09-15T22:58:28.246108+00:00 [queued]>
+[2025-09-15T22:58:31.121+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: just_orchestration.prepare_workspace manual__2025-09-15T22:58:28.246108+00:00 [queued]>
+[2025-09-15T22:58:31.133+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-15T22:58:31.572+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): prepare_workspace> on 2025-09-15 22:58:28.246108+00:00
+[2025-09-15T22:58:31.584+0000] {standard_task_runner.py:60} INFO - Started process 447 to run task
+[2025-09-15T22:58:31.599+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'just_orchestration', 'prepare_workspace', 'manual__2025-09-15T22:58:28.246108+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/another.py', '--cfg-path', '/tmp/tmpi3qg2d_a']
+[2025-09-15T22:58:31.611+0000] {standard_task_runner.py:88} INFO - Job 38: Subtask prepare_workspace
+[2025-09-15T22:58:32.230+0000] {task_command.py:423} INFO - Running <TaskInstance: just_orchestration.prepare_workspace manual__2025-09-15T22:58:28.246108+00:00 [running]> on host f5911201595b
+[2025-09-15T22:58:32.899+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='williams' AIRFLOW_CTX_DAG_ID='just_orchestration' AIRFLOW_CTX_TASK_ID='prepare_workspace' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T22:58:28.246108+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-15T22:58:28.246108+00:00'
+[2025-09-15T22:58:32.903+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-15T22:58:32.905+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    mkdir -p /opt/Models\n    mkdir -p /opt/data\n    mkdir -p /opt/metrics\n    echo "Pipeline started at $(date)" > /opt/Models/pipeline_log.txt\n    ']
+[2025-09-15T22:58:32.925+0000] {subprocess.py:86} INFO - Output:
+[2025-09-15T22:58:32.939+0000] {subprocess.py:93} INFO - mkdir: cannot create directory ‘/opt/Models’: Permission denied
+[2025-09-15T22:58:32.946+0000] {subprocess.py:93} INFO - mkdir: cannot create directory ‘/opt/data’: Permission denied
+[2025-09-15T22:58:32.954+0000] {subprocess.py:93} INFO - mkdir: cannot create directory ‘/opt/metrics’: Permission denied
+[2025-09-15T22:58:32.961+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 5: /opt/Models/pipeline_log.txt: No such file or directory
+[2025-09-15T22:58:32.966+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-09-15T22:58:33.008+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-09-15T22:58:33.019+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=just_orchestration, task_id=prepare_workspace, execution_date=20250915T225828, start_date=20250915T225830, end_date=20250915T225833
+[2025-09-15T22:58:33.079+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 38 for task prepare_workspace (Bash command failed. The command returned a non-zero exit code 1.; 447)
+[2025-09-15T22:58:33.107+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-09-15T22:58:33.183+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,55 @@
+[2025-09-14T09:02:11.170+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-09-14T09:02:12.078+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2025-09-14T09:02:58.301+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-14T09:12:03.686+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-13T16:48:53.904123+00:00 [queued]>
+[2025-09-14T09:12:04.016+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-13T16:48:53.904123+00:00 [queued]>
+[2025-09-14T09:12:04.023+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 2
+[2025-09-14T09:12:04.800+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): train_model> on 2025-09-13 16:48:53.904123+00:00
+[2025-09-14T09:12:04.892+0000] {standard_task_runner.py:60} INFO - Started process 173 to run task
+[2025-09-14T09:12:05.002+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'train_model', 'manual__2025-09-13T16:48:53.904123+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmp5qf62qlj']
+[2025-09-14T09:12:05.087+0000] {standard_task_runner.py:88} INFO - Job 115: Subtask train_model
+[2025-09-14T09:12:07.522+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.train_model manual__2025-09-13T16:48:53.904123+00:00 [running]> on host c665ef4223e6
+[2025-09-14T09:12:09.708+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-13T16:48:53.904123+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-13T16:48:53.904123+00:00'
+[2025-09-14T09:12:10.836+0000] {docker.py:359} INFO - Starting docker container from image 972111245465383674563253/prediction-apps:latest
+[2025-09-14T09:13:01.616+0000] {docker.py:429} INFO - /app/src/data/clean_data.py:26: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  median_by_tenure = df_clean.groupby(pd.cut(df_clean['tenure'], bins=[0, 12, 24, 48, 72]))['total_charges'].median()
+[2025-09-14T09:13:07.031+0000] {docker.py:429} INFO - === CUSTOMER CHURN PREDICTION TRAINING ===
+
+1. Loading data...
+Loaded 5000 rows and 14 columns
+
+2. Cleaning data...
+Starting data cleaning...
+Removed 0 duplicate rows
+Data cleaning completed
+Removed 293 outliers from total_charges
+Data cleaning completed. Final shape: (4707, 14)
+
+3. Transforming data...
+Starting data transformation...
+Fitted encoder for gender
+Fitted encoder for contract
+Fitted encoder for internet_service
+Fitted encoder for online_security
+Fitted encoder for tech_support
+Fitted encoder for streaming_tv
+Fitted encoder for payment_method
+Fitted encoder for paperless_billing
+Train set: 3765 samples
+Test set: 942 samples
+All transformers saved to /app/Models/transformers.joblib
+Data transformation completed
+
+4. Training models...
+Training logistic_regression...
+[2025-09-14T09:22:14.416+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-09-14T09:23:55.628+0000] {process_utils.py:131} INFO - Sending 15 to group 173. PIDs of all processes in the group: [173]
+[2025-09-14T09:24:07.428+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 173
+[2025-09-14T09:24:31.392+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-09-14T09:24:39.959+0000] {docker.py:521} INFO - Stopping docker container
+[2025-09-14T09:25:10.826+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=173, name='airflow task ru', status='sleeping', started='09:12:03') did not respond to SIGTERM. Trying SIGKILL
+[2025-09-14T09:25:35.257+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 173
+[2025-09-14T09:25:35.473+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=173, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='09:12:03') (173) terminated with exit code -9
+[2025-09-14T09:25:35.733+0000] {standard_task_runner.py:175} ERROR - Job 115 was killed before it finished (likely due to running out of memory)
+[2025-09-14T09:25:36.460+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2025-09-14T09:25:55.663+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
