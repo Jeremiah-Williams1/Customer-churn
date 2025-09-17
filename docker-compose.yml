@@ -38,6 +38,11 @@ services:
         airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com || true &&
         exec airflow webserver --port 8080
       "
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
     depends_on:
       - postgres
     networks:

@@ -1,0 +1,56 @@
+[2025-09-16T21:22:44.749+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.evaluate_model scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T21:22:44.797+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.evaluate_model scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T21:22:44.800+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-16T21:22:44.891+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): evaluate_model> on 2025-09-15 00:00:00+00:00
+[2025-09-16T21:22:44.909+0000] {standard_task_runner.py:60} INFO - Started process 964 to run task
+[2025-09-16T21:22:44.924+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'evaluate_model', 'scheduled__2025-09-15T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmpk3tcezpo']
+[2025-09-16T21:22:44.933+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask evaluate_model
+[2025-09-16T21:22:45.176+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.evaluate_model scheduled__2025-09-15T00:00:00+00:00 [running]> on host 0e5b2843133d
+[2025-09-16T21:22:45.519+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='evaluate_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-15T00:00:00+00:00'
+[2025-09-16T21:22:45.779+0000] {docker.py:359} INFO - Starting docker container from image 972111245465383674563253/prediction-apps:latest
+[2025-09-16T21:23:19.891+0000] {docker.py:429} INFO - === MODEL EVALUATION ===
+
+1. Loading the test dataset...
+Loaded 942 rows and 23 columns
+Loaded 942 rows and 1 columns
+Metrics pushed to Pushgateway successfully
+
+logistic_regression Results:
+  Accuracy: 0.7176
+  Precision: 0.6219
+  recall_for_class_0: 0.8788
+  recall_for_class_1: 0.8788
+  Recall: 0.3968
+  F1_Score: 0.4845
+  ROC_AUC: 0.7578
+Metrics pushed to Pushgateway successfully
+
+random_forest Results:
+  Accuracy: 0.6953
+  Precision: 0.6346
+  recall_for_class_0: 0.9394
+  recall_for_class_1: 0.9394
+  Recall: 0.2095
+  F1_Score: 0.3150
+  ROC_AUC: 0.7578
+Metrics pushed to Pushgateway successfully
+
+Gradient_Boosting Results:
+  Accuracy: 0.7059
+  Precision: 0.5979
+  recall_for_class_0: 0.8756
+  recall_for_class_1: 0.8756
+  Recall: 0.3683
+  F1_Score: 0.4558
+  ROC_AUC: 0.7571
+
+=== SUMMARY ===
+   Accuracy  Precision  recall_for_class_0  ...  Recall  F1_Score  ROC_AUC
+0    0.7176     0.6219              0.8788  ...  0.3968    0.4845   0.7578
+1    0.6953     0.6346              0.9394  ...  0.2095    0.3150   0.7578
+2    0.7059     0.5979              0.8756  ...  0.3683    0.4558   0.7571
+
+[3 rows x 7 columns]
+[2025-09-16T21:23:25.192+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_orchestration, task_id=evaluate_model, execution_date=20250915T000000, start_date=20250916T212244, end_date=20250916T212325
+[2025-09-16T21:23:25.518+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-16T21:23:25.862+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

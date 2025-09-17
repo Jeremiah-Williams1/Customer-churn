@@ -1,0 +1,32 @@
+[2025-09-16T00:00:06.537+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.prepare_workspace scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T00:00:06.557+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.prepare_workspace scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T00:00:06.559+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-16T00:00:07.684+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): prepare_workspace> on 2025-09-15 00:00:00+00:00
+[2025-09-16T00:00:07.695+0000] {standard_task_runner.py:60} INFO - Started process 444 to run task
+[2025-09-16T00:00:07.710+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'prepare_workspace', 'scheduled__2025-09-15T00:00:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmp3hmgf5vm']
+[2025-09-16T00:00:07.719+0000] {standard_task_runner.py:88} INFO - Job 51: Subtask prepare_workspace
+[2025-09-16T00:00:09.140+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.prepare_workspace scheduled__2025-09-15T00:00:00+00:00 [running]> on host ff4ba757c7c6
+[2025-09-16T00:00:09.911+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='prepare_workspace' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-15T00:00:00+00:00'
+[2025-09-16T00:00:09.922+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-16T00:00:09.927+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    mkdir -p /shared_data/Models\n    mkdir -p /shared_data/data\n    mkdir -p /shared_data/metrics\n    echo "Pipeline started at $(date)" > /shared_data/Models/pipeline_log.txt\n    ']
+[2025-09-16T00:00:09.945+0000] {subprocess.py:86} INFO - Output:
+[2025-09-16T00:00:09.969+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-16T00:00:10.444+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_orchestration, task_id=prepare_workspace, execution_date=20250915T000000, start_date=20250916T000006, end_date=20250916T000010
+[2025-09-16T00:00:10.705+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-16T00:00:10.904+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-16T20:48:24.398+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.prepare_workspace scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T20:48:24.487+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_orchestration.prepare_workspace scheduled__2025-09-15T00:00:00+00:00 [queued]>
+[2025-09-16T20:48:24.491+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-09-16T20:48:24.573+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): prepare_workspace> on 2025-09-15 00:00:00+00:00
+[2025-09-16T20:48:24.607+0000] {standard_task_runner.py:60} INFO - Started process 450 to run task
+[2025-09-16T20:48:24.666+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_orchestration', 'prepare_workspace', 'scheduled__2025-09-15T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/orchestration.py', '--cfg-path', '/tmp/tmpraqq6xwa']
+[2025-09-16T20:48:24.725+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask prepare_workspace
+[2025-09-16T20:48:25.110+0000] {task_command.py:423} INFO - Running <TaskInstance: ml_pipeline_orchestration.prepare_workspace scheduled__2025-09-15T00:00:00+00:00 [running]> on host 0e5b2843133d
+[2025-09-16T20:48:26.327+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jerr-williams' AIRFLOW_CTX_DAG_ID='ml_pipeline_orchestration' AIRFLOW_CTX_TASK_ID='prepare_workspace' AIRFLOW_CTX_EXECUTION_DATE='2025-09-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-15T00:00:00+00:00'
+[2025-09-16T20:48:26.353+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-16T20:48:26.357+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    mkdir -p /shared_data/Models\n    mkdir -p /shared_data/data\n    mkdir -p /shared_data/metrics\n    echo "Pipeline started at $(date)" > /shared_data/Models/pipeline_log.txt\n    ']
+[2025-09-16T20:48:26.449+0000] {subprocess.py:86} INFO - Output:
+[2025-09-16T20:48:26.751+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-16T20:48:26.903+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_orchestration, task_id=prepare_workspace, execution_date=20250915T000000, start_date=20250916T204824, end_date=20250916T204826
+[2025-09-16T20:48:27.521+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-09-16T20:48:28.111+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
