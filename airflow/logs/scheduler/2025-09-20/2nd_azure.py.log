@@ -1,0 +1,549 @@
+[2025-09-20T05:33:52.421+0000] {processor.py:161} INFO - Started process (PID=2980) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:33:52.426+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:33:52.430+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:33:52.429+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:34:19.576+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:34:19.563+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:34:19.585+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:34:19.755+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 27.349 seconds
+[2025-09-20T05:34:50.168+0000] {processor.py:161} INFO - Started process (PID=3008) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:34:50.175+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:34:50.189+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:34:50.186+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:35:17.049+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:35:17.036+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:35:17.054+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:35:17.159+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 27.012 seconds
+[2025-09-20T05:35:47.781+0000] {processor.py:161} INFO - Started process (PID=3038) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:35:47.791+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:35:47.810+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:35:47.807+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:36:11.119+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:36:11.105+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:36:11.130+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:36:11.300+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 23.559 seconds
+[2025-09-20T05:36:42.620+0000] {processor.py:161} INFO - Started process (PID=3073) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:36:43.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:36:43.126+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:36:43.123+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:37:06.498+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:37:06.484+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:37:06.503+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:37:06.609+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 24.068 seconds
+[2025-09-20T05:37:37.577+0000] {processor.py:161} INFO - Started process (PID=3103) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:37:37.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:37:37.603+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:37:37.598+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:37:59.665+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:37:59.650+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:37:59.678+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:37:59.842+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 22.333 seconds
+[2025-09-20T05:38:30.122+0000] {processor.py:161} INFO - Started process (PID=3138) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:38:30.130+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:38:30.143+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:38:30.139+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:38:53.345+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:38:53.333+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:38:53.355+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:38:53.710+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 23.608 seconds
+[2025-09-20T05:39:24.069+0000] {processor.py:161} INFO - Started process (PID=3168) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:39:24.077+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:39:24.089+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:39:24.085+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:39:50.847+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:39:50.806+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:39:50.860+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:39:50.987+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 26.949 seconds
+[2025-09-20T05:40:22.168+0000] {processor.py:161} INFO - Started process (PID=3203) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:40:22.177+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T05:40:22.188+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:40:22.185+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T05:40:51.327+0000] {logging_mixin.py:188} INFO - [2025-09-20T05:40:48.619+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T05:40:51.392+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:12:21.021+0000] {processor.py:161} INFO - Started process (PID=202) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:12:21.284+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:12:21.290+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:12:21.289+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:12:47.908+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:12:47.906+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:12:47.910+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:12:49.971+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 29.123 seconds
+[2025-09-20T14:13:20.298+0000] {processor.py:161} INFO - Started process (PID=229) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:13:20.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:13:20.315+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:13:20.313+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:13:27.491+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:13:27.486+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:13:27.494+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:13:27.607+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 7.330 seconds
+[2025-09-20T14:13:57.918+0000] {processor.py:161} INFO - Started process (PID=254) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:13:57.924+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:13:57.930+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:13:57.928+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:14:06.951+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:14:06.871+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:14:06.959+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:14:10.102+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 12.207 seconds
+[2025-09-20T14:14:40.906+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:14:40.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:14:40.913+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:14:40.912+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:15:07.903+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:15:07.869+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:15:07.904+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:15:07.995+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 27.098 seconds
+[2025-09-20T14:15:38.353+0000] {processor.py:161} INFO - Started process (PID=304) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:15:38.357+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:15:38.365+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:15:38.364+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:15:48.131+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:15:48.123+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:15:48.138+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:15:48.669+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 10.330 seconds
+[2025-09-20T14:16:19.776+0000] {processor.py:161} INFO - Started process (PID=332) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:16:19.781+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:16:19.795+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:16:19.794+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:16:29.880+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:16:29.875+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:16:29.886+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:16:30.096+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 10.346 seconds
+[2025-09-20T14:17:00.532+0000] {processor.py:161} INFO - Started process (PID=359) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:17:00.540+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:17:00.562+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:17:00.558+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:17:09.919+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:17:09.912+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:17:09.920+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:17:10.072+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 9.576 seconds
+[2025-09-20T14:17:40.354+0000] {processor.py:161} INFO - Started process (PID=384) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:17:40.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:17:40.365+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:17:40.364+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:17:46.799+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:17:46.795+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 136, in <module>
+    train_model_task = PythonOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 420, in apply_defaults
+    raise AirflowException(f"missing keyword argument {missing_args.pop()!r}")
+airflow.exceptions.AirflowException: missing keyword argument 'python_callable'
+[2025-09-20T14:17:46.800+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:17:46.880+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 6.552 seconds
+[2025-09-20T14:25:34.359+0000] {processor.py:161} INFO - Started process (PID=163) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:25:34.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:25:34.426+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:25:34.416+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:26:04.516+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:26:04.515+0000] {timeout.py:68} ERROR - Process timed out, PID: 163
+[2025-09-20T14:26:04.757+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:26:04.517+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 10, in <module>
+    from azure.ai.ml import MLClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/__init__.py", line 13, in <module>
+    from ._ml_client import MLClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_ml_client.py", line 79, in <module>
+    from azure.ai.ml.operations import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/operations/__init__.py", line 13, in <module>
+    from ._batch_deployment_operations import BatchDeploymentOperations
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/operations/_batch_deployment_operations.py", line 20, in <module>
+    from azure.ai.ml._utils._endpoint_utils import upload_dependencies, validate_scoring_script
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_utils/_endpoint_utils.py", line 24, in <module>
+    from azure.ai.ml.operations._operation_orchestrator import OperationOrchestrator
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/operations/_operation_orchestrator.py", line 14, in <module>
+    from azure.ai.ml._artifacts._artifact_utilities import _check_and_upload_env_build_context, _check_and_upload_path
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_artifacts/_artifact_utilities.py", line 16, in <module>
+    from azure.ai.ml._artifacts._blob_storage_helper import BlobStorageClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_artifacts/_blob_storage_helper.py", line 41, in <module>
+    from azure.storage.blob import BlobServiceClient, ContainerClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/__init__.py", line 10, in <module>
+    from ._blob_client import BlobClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 24, in <module>
+    from ._shared.base_client import StorageAccountHostsMixin, parse_connection_str, parse_query, TransportWrapper
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/base_client.py", line 40, in <module>
+    from .authentication import SharedKeyCredentialPolicy
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/authentication.py", line 18, in <module>
+    from azure.core.pipeline.transport import AioHttpTransport  # pylint: disable=non-abstract-transport-import
+  File "<frozen importlib._bootstrap>", line 1039, in _handle_fromlist
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/core/pipeline/transport/__init__.py", line 90, in __getattr__
+    from ._aiohttp import AioHttpTransport
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 892, in _find_spec
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/2nd_azure.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.8.1/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.8.1/best-practices.html#reducing-dag-complexity, PID: 163
+[2025-09-20T14:26:04.762+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:26:04.933+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 30.712 seconds
+[2025-09-20T14:26:36.438+0000] {processor.py:161} INFO - Started process (PID=188) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:26:36.537+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:26:36.618+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:26:36.578+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:27:06.815+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:27:06.815+0000] {timeout.py:68} ERROR - Process timed out, PID: 188
+[2025-09-20T14:27:06.855+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:27:06.820+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 10, in <module>
+    from azure.ai.ml import MLClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/__init__.py", line 13, in <module>
+    from ._ml_client import MLClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_ml_client.py", line 79, in <module>
+    from azure.ai.ml.operations import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/operations/__init__.py", line 13, in <module>
+    from ._batch_deployment_operations import BatchDeploymentOperations
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/operations/_batch_deployment_operations.py", line 20, in <module>
+    from azure.ai.ml._utils._endpoint_utils import upload_dependencies, validate_scoring_script
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_utils/_endpoint_utils.py", line 24, in <module>
+    from azure.ai.ml.operations._operation_orchestrator import OperationOrchestrator
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/operations/_operation_orchestrator.py", line 14, in <module>
+    from azure.ai.ml._artifacts._artifact_utilities import _check_and_upload_env_build_context, _check_and_upload_path
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_artifacts/_artifact_utilities.py", line 16, in <module>
+    from azure.ai.ml._artifacts._blob_storage_helper import BlobStorageClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_artifacts/_blob_storage_helper.py", line 41, in <module>
+    from azure.storage.blob import BlobServiceClient, ContainerClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/__init__.py", line 10, in <module>
+    from ._blob_client import BlobClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_blob_client.py", line 24, in <module>
+    from ._shared.base_client import StorageAccountHostsMixin, parse_connection_str, parse_query, TransportWrapper
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/base_client.py", line 38, in <module>
+    from .constants import CONNECTION_TIMEOUT, DEFAULT_OAUTH_SCOPE, READ_TIMEOUT, SERVICE_HOST_BASE, STORAGE_OAUTH_SCOPE
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_shared/constants.py", line 7, in <module>
+    from .._serialize import _SUPPORTED_API_VERSIONS
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_serialize.py", line 17, in <module>
+    from ._models import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_models.py", line 19, in <module>
+    from ._generated.models import ArrowField
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/__init__.py", line 9, in <module>
+    from ._azure_blob_storage import AzureBlobStorage
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/_azure_blob_storage.py", line 15, in <module>
+    from . import models as _models
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/storage/blob/_generated/models/__init__.py", line 9, in <module>
+    from ._models_py3 import AccessPolicy
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 971, in get_code
+  File "<frozen importlib._bootstrap_external>", line 640, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/2nd_azure.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.8.1/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.8.1/best-practices.html#reducing-dag-complexity, PID: 188
+[2025-09-20T14:27:06.858+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:27:08.051+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 31.772 seconds
+[2025-09-20T14:27:38.503+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:27:38.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:27:38.513+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:27:38.512+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:27:59.698+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:28:02.642+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:28:02.637+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:28:03.193+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:28:03.191+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:28:03.697+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 25.225 seconds
+[2025-09-20T14:28:34.731+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:28:34.736+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:28:34.743+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:28:34.741+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:28:57.515+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:28:57.773+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:28:57.772+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:28:58.442+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:28:58.440+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:28:58.959+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 24.242 seconds
+[2025-09-20T14:29:30.353+0000] {processor.py:161} INFO - Started process (PID=263) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:29:30.369+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:29:30.412+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:29:30.408+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:29:46.903+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:29:47.254+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:29:47.253+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:29:47.323+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:29:47.322+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:29:47.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 17.106 seconds
+[2025-09-20T14:30:17.867+0000] {processor.py:161} INFO - Started process (PID=288) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:30:17.918+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:30:17.947+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:30:17.944+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:30:44.114+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:30:44.178+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:30:44.177+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:30:44.404+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:30:44.393+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:30:44.590+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 26.836 seconds
+[2025-09-20T14:31:15.481+0000] {processor.py:161} INFO - Started process (PID=313) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:31:15.493+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:31:15.515+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:31:15.506+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:31:32.213+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:31:32.269+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:31:32.268+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:31:32.337+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:31:32.336+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:31:32.448+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 17.031 seconds
+[2025-09-20T14:32:02.962+0000] {processor.py:161} INFO - Started process (PID=341) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:32:02.967+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:32:02.975+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:32:02.973+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:32:32.647+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:32:32.892+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:32:32.890+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:32:33.178+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:32:33.176+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:32:33.390+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 30.453 seconds
+[2025-09-20T14:33:04.600+0000] {processor.py:161} INFO - Started process (PID=366) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:33:04.603+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:33:04.607+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:33:04.605+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:33:11.766+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:33:11.826+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:33:11.825+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:33:11.892+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:33:11.891+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:33:11.954+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 7.368 seconds
+[2025-09-20T14:33:42.109+0000] {processor.py:161} INFO - Started process (PID=396) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:33:42.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:33:42.124+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:33:42.121+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:33:49.510+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:33:49.552+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:33:49.551+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:33:49.606+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:33:49.606+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:33:49.800+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 7.710 seconds
+[2025-09-20T14:34:20.226+0000] {processor.py:161} INFO - Started process (PID=418) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:34:20.245+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:34:20.258+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:34:20.254+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:34:35.094+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:34:35.152+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:34:35.151+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:34:35.221+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:34:35.220+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:34:35.311+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 15.119 seconds
+[2025-09-20T14:35:05.645+0000] {processor.py:161} INFO - Started process (PID=443) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:35:05.650+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:35:05.654+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:35:05.653+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:35:12.416+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:35:12.471+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:35:12.470+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:35:12.541+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:35:12.541+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:35:12.609+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 6.988 seconds
+[2025-09-20T14:35:43.760+0000] {processor.py:161} INFO - Started process (PID=468) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:35:43.794+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:35:43.835+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:35:43.820+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:35:56.636+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:35:56.766+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:35:56.765+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:35:56.829+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:35:56.829+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:35:56.974+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 13.339 seconds
+[2025-09-20T14:36:27.441+0000] {processor.py:161} INFO - Started process (PID=503) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:36:27.452+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:36:27.473+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:36:27.469+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:36:57.576+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:36:57.575+0000] {timeout.py:68} ERROR - Process timed out, PID: 503
+[2025-09-20T14:36:57.724+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:36:57.577+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/2nd_azure.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/marshmallow/schema.py", line 166, in resolve_hooks
+    attr = parent.__dict__[attr_name]
+KeyError: '__sizeof__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/2nd_azure.py", line 10, in <module>
+    from azure.ai.ml import MLClient
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/__init__.py", line 11, in <module>
+    from azure.ai.ml.entities._inputs_outputs import Input, Output
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/entities/__init__.py", line 18, in <module>
+    from ._assets._artifacts._package.base_environment_source import BaseEnvironment
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/entities/_assets/__init__.py", line 9, in <module>
+    from ._artifacts.code import Code
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/entities/_assets/_artifacts/code.py", line 16, in <module>
+    from azure.ai.ml.entities._util import load_from_dict
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/entities/_util.py", line 20, in <module>
+    from .._schema._deployment.batch.batch_deployment import BatchDeploymentSchema
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/_deployment/batch/batch_deployment.py", line 21, in <module>
+    from azure.ai.ml._schema.pipeline.pipeline_component import PipelineComponentFileRefField
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/pipeline/__init__.py", line 16, in <module>
+    from .pipeline_job import PipelineJobSchema
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/pipeline/pipeline_job.py", line 22, in <module>
+    from azure.ai.ml._schema.pipeline.pipeline_component import (
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/pipeline/pipeline_component.py", line 25, in <module>
+    from azure.ai.ml._schema.pipeline.automl_node import AutoMLNodeSchema
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/pipeline/automl_node.py", line 11, in <module>
+    from azure.ai.ml._schema.automl import AutoMLClassificationSchema, AutoMLForecastingSchema, AutoMLRegressionSchema
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/automl/__init__.py", line 9, in <module>
+    from .featurization_settings import FeaturizationSettingsSchema, TableFeaturizationSettingsSchema
+  File "/home/airflow/.local/lib/python3.8/site-packages/azure/ai/ml/_schema/automl/featurization_settings.py", line 17, in <module>
+    class ColumnTransformerSchema(metaclass=PatchedSchemaMeta):
+  File "/home/airflow/.local/lib/python3.8/site-packages/marshmallow/schema.py", line 148, in __init__
+    cls._hooks = cls.resolve_hooks()
+  File "/home/airflow/.local/lib/python3.8/site-packages/marshmallow/schema.py", line 166, in resolve_hooks
+    attr = parent.__dict__[attr_name]
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/2nd_azure.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.8.1/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.8.1/best-practices.html#reducing-dag-complexity, PID: 503
+[2025-09-20T14:36:57.735+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:36:57.977+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 30.631 seconds
+[2025-09-20T14:37:28.585+0000] {processor.py:161} INFO - Started process (PID=528) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:37:28.588+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:37:28.592+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:37:28.591+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:37:37.048+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:37:37.088+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:37:37.088+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:37:37.147+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:37:37.146+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:37:37.766+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 9.204 seconds
+[2025-09-20T14:38:08.175+0000] {processor.py:161} INFO - Started process (PID=553) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:38:08.213+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:38:08.248+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:38:08.235+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:38:32.544+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:38:32.597+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:38:32.596+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:38:32.653+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:38:32.652+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:38:32.706+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 24.608 seconds
+[2025-09-20T14:39:03.012+0000] {processor.py:161} INFO - Started process (PID=578) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:39:03.017+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:39:03.023+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:39:03.021+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:39:09.246+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:39:09.300+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:39:09.300+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:39:09.381+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:39:09.380+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:39:09.506+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 6.512 seconds
+[2025-09-20T14:39:40.304+0000] {processor.py:161} INFO - Started process (PID=603) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:39:40.308+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T14:39:40.314+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:39:40.312+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:39:47.390+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T14:39:47.455+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:39:47.455+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T14:39:47.581+0000] {logging_mixin.py:188} INFO - [2025-09-20T14:39:47.580+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T14:39:47.706+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 7.423 seconds
+[2025-09-20T15:00:57.530+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:00:57.599+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T15:00:57.605+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:00:57.602+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:01:20.245+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:01:20.898+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:01:20.895+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T15:01:21.274+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:01:21.272+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T15:01:22.601+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 25.197 seconds
+[2025-09-20T15:01:53.000+0000] {processor.py:161} INFO - Started process (PID=192) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:01:53.005+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T15:01:53.010+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:01:53.008+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:02:02.033+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:02:03.536+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:02:03.535+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T15:02:03.604+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:02:03.604+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T15:02:03.761+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 10.776 seconds
+[2025-09-20T15:02:34.805+0000] {processor.py:161} INFO - Started process (PID=214) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:02:34.818+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T15:02:34.841+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:02:34.834+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:02:44.121+0000] {processor.py:840} INFO - DAG(s) 'orchestration_with_aml' retrieved from /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:02:44.172+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:02:44.171+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-09-20T15:02:44.256+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:02:44.254+0000] {dag.py:3823} INFO - Setting next_dagrun for orchestration_with_aml to 2025-09-19 00:00:00+00:00, run_after=2025-09-20 00:00:00+00:00
+[2025-09-20T15:02:44.344+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/2nd_azure.py took 9.555 seconds
+[2025-09-20T15:03:15.154+0000] {processor.py:161} INFO - Started process (PID=242) to work on /opt/airflow/dags/2nd_azure.py
+[2025-09-20T15:03:15.169+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/2nd_azure.py for tasks to queue
+[2025-09-20T15:03:15.220+0000] {logging_mixin.py:188} INFO - [2025-09-20T15:03:15.184+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/2nd_azure.py
