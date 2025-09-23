@@ -11,3 +11,18 @@ Thumbs.db
 # Dependencies
 node_modules/
 /data
+
+# Ignore environment files
+.env
+.venv
+*.egg-info
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/

@@ -19,6 +19,15 @@ services:
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
       - AIRFLOW__WEBSERVER__SECRET_KEY=124fasdh3hdshfagh93uoi233ew5
+
+      - AZURE_CLIENT_ID=os.getenv("CLIENT_ID")
+      - AZURE_CLIENT_SECRET=os.getenv("CLIENT_SECRET")
+      - AZURE_TENANT_ID=os.getenv("TENANT_ID")
+
+      - AZURE_CLIENT_ID=os.getenv("CLIENT_ID")
+      - AZURE_CLIENT_SECRET=os.getenv("CLIENT_SECRET")
+      - AZURE_TENANT_ID=os.getenv("TENANT_ID")
+
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -28,6 +37,8 @@ services:
       - ./data:/shared_data/data
       - ./metrics:/shared_data/metrics
       - ./src:/shared_data/src
+
+      - /home/jerremiah/.azure:/home/airflow/.azure:ro
 
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
@@ -68,6 +79,8 @@ services:
       - ./data:/shared_data/data
       - ./metrics:/shared_data/metrics
       - ./src:/shared_data/src
+
+      - /home/jerremiah/.azure:/home/airflow/.azure:ro
 
       - /var/run/docker.sock:/var/run/docker.sock
     command: airflow scheduler
